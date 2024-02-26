@@ -18,7 +18,12 @@ public class DemoApplication {
 	public String test()
 	{
 		JMeter pee = new JMeter();
-		String hi = pee.poop();
+		String hi;
+		try {
+			hi = pee.runTest();
+		} catch (Exception ignore) {
+			hi = "poop";
+		}
 		return hi;
 	}
 }

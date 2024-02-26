@@ -5,7 +5,7 @@ import org.apache.jmeter.engine.StandardJMeterEngine;
 import org.apache.jmeter.save.SaveService;
 import org.apache.jmeter.util.JMeterUtils;
 import org.apache.jorphan.collections.HashTree;
-import java.io.FileInputStream;
+import java.io.File;
 
 public class JMeter {
 
@@ -13,29 +13,33 @@ public class JMeter {
     {
         return "Success";
     }
-    public static void main(String[] argv) throws Exception {
-        /** 
-        // JMeter Engine
-        StandardJMeterEngine jmeter = new StandardJMeterEngine();
+    public String runTest() throws Exception {
+        try{
+            // JMeter Engine
+            StandardJMeterEngine jmeter = new StandardJMeterEngine();
 
 
-        // Initialize Properties, logging, locale, etc.
-        JMeterUtils.loadJMeterProperties("/path/to/your/jmeter/bin/jmeter.properties");
-        JMeterUtils.setJMeterHome("/path/to/your/jmeter");
-        //JMeterUtils.initLogging();// you can comment this line out to see extra log messages of i.e. DEBUG level
-        JMeterUtils.initLocale();
+            // Initialize Properties, logging, locale, etc.
+            JMeterUtils.loadJMeterProperties("../apache-jmeter-5.6.3/bin/jmeter.properties");
+            JMeterUtils.setJMeterHome("../apache-jmeter-5.6.3");
+            //JMeterUtils.initLogging();// you can comment this line out to see extra log messages of i.e. DEBUG level
+            JMeterUtils.initLocale();
 
-        // Initialize JMeter SaveService
-        SaveService.loadProperties();
+            // Initialize JMeter SaveService
+            SaveService.loadProperties();
 
-        // Load existing .jmx Test Plan
-        FileInputStream in = new FileInputStream("/path/to/your/jmeter/extras/Test.jmx");
-        HashTree testPlanTree = SaveService.loadTree(in);
-        in.close();
+            // Load existing .jmx Test Plan
+            File in = new File("nba.jmx");
+            HashTree testPlanTree = SaveService.loadTree(in);
 
-        // Run JMeter Test
-        jmeter.configure(testPlanTree);
-        jmeter.run();
-        */
+            // Run JMeter Test
+            jmeter.configure(testPlanTree);
+            jmeter.run();
+            return "hi";
+        }
+        catch (Exception e) {
+            // TODO: handle exception
+            return "haha error";
+        }
     }
 }
