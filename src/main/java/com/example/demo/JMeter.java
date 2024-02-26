@@ -2,6 +2,7 @@ package com.example.demo;
 
 //class code referenced from https://www.blazemeter.com/blog/jmeter-command-line
 import org.apache.jmeter.engine.StandardJMeterEngine;
+import org.apache.jmeter.reporters.ResultCollector;
 import org.apache.jmeter.save.SaveService;
 import org.apache.jmeter.util.JMeterUtils;
 import org.apache.jorphan.collections.HashTree;
@@ -31,6 +32,11 @@ public class JMeter {
             // Load existing .jmx Test Plan
             File in = new File("nba.jmx");
             HashTree testPlanTree = SaveService.loadTree(in);
+            
+            String csvResults = "results.csv";
+            ResultCollector result = new ResultCollector();
+            result.setFilename(csvResults);
+            testPlanTree.add(testPlanTree.getArray()[0], result);
 
             // Run JMeter Test
             jmeter.configure(testPlanTree);
