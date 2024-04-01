@@ -45,7 +45,7 @@ public class JMeter {
         }
         catch (Exception e) {
             // TODO: handle exception
-            return "haha error";
+            return "haha errorz";
         }
     }
 }
