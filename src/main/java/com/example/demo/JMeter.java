@@ -21,8 +21,8 @@ public class JMeter {
 
 
             // Initialize Properties, logging, locale, etc.
-            JMeterUtils.loadJMeterProperties("/apache-jmeter-5.6.3/bin/jmeter.properties");
-            JMeterUtils.setJMeterHome("/apache-jmeter-5.6.3");
+            JMeterUtils.loadJMeterProperties("apache-jmeter-5.6.3/bin/jmeter.properties");
+            JMeterUtils.setJMeterHome("apache-jmeter-5.6.3");
             //JMeterUtils.initLogging();// you can comment this line out to see extra log messages of i.e. DEBUG level
             JMeterUtils.initLocale();
 
