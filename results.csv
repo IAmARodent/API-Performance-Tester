@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
 1708915522848,979,NBA,200,OK,10 Users 1-5,text,true,,409236,226,10,10,https://www.nba.com/,59,0,19
 1708915522848,59,NBA-0,301,Moved Permanently,10 Users 1-5,,true,,1245,113,10,10,http://www.nba.com/,59,0,19
@@ -209,3 +210,5 @@ timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success
 1712452994766,1391,NBA,200,OK,10 Users 1-10,text,true,,394555,226,1,1,https://www.nba.com/,40,0,16
 1712452994766,40,NBA-0,301,Moved Permanently,10 Users 1-10,,true,,1166,113,1,1,http://www.nba.com/,40,0,16
 1712452994807,1350,NBA-1,200,OK,10 Users 1-10,text,true,,393389,113,1,1,https://www.nba.com/,791,0,43
+=======
+>>>>>>> 4f0fc9ee715f8bc37e0ecc7329197b8ad97e1bb8
