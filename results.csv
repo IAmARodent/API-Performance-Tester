@@ -59,3 +59,153 @@ timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success
 1712452856338,3282,NBA,200,OK,10 Users 1-2,text,true,,394592,228,1,1,https://www.nba.com/,946,0,74
 1712452856338,946,NBA-0,301,Moved Permanently,10 Users 1-2,,true,,1166,114,1,1,http://www.nba.com/,946,0,74
 1712452857285,2335,NBA-1,200,OK,10 Users 1-2,text,true,,393426,114,1,1,https://www.nba.com/,2058,0,1057
+1712452920065,619,NBA,200,OK,10 Users 1-5,text,true,,394375,226,10,10,https://www.nba.com/,38,0,15
+1712452920065,38,NBA-0,301,Moved Permanently,10 Users 1-5,,true,,1166,113,10,10,http://www.nba.com/,38,0,15
+1712452920103,581,NBA-1,200,OK,10 Users 1-5,text,true,,393209,113,10,10,https://www.nba.com/,443,0,32
+1712452919965,727,NBA,200,OK,10 Users 1-4,text,true,,394375,226,10,10,https://www.nba.com/,39,0,15
+1712452919965,39,NBA-0,301,Moved Permanently,10 Users 1-4,,true,,1166,113,10,10,http://www.nba.com/,39,0,15
+1712452920005,687,NBA-1,200,OK,10 Users 1-4,text,true,,393209,113,10,10,https://www.nba.com/,563,0,36
+1712452919765,1067,NBA,200,OK,10 Users 1-2,text,true,,394615,226,8,8,https://www.nba.com/,39,0,17
+1712452919765,39,NBA-0,301,Moved Permanently,10 Users 1-2,,true,,1166,113,8,8,http://www.nba.com/,39,0,17
+1712452919804,1028,NBA-1,200,OK,10 Users 1-2,text,true,,393449,113,8,8,https://www.nba.com/,656,0,151
+1712452920264,701,NBA,200,OK,10 Users 1-7,text,true,,394531,226,7,7,https://www.nba.com/,39,0,17
+1712452920264,39,NBA-0,301,Moved Permanently,10 Users 1-7,,true,,1166,113,7,7,http://www.nba.com/,39,0,17
+1712452920303,662,NBA-1,200,OK,10 Users 1-7,text,true,,393365,113,7,7,https://www.nba.com/,391,0,44
+1712452919866,1148,NBA,200,OK,10 Users 1-3,text,true,,394651,226,6,6,https://www.nba.com/,55,0,34
+1712452919866,55,NBA-0,301,Moved Permanently,10 Users 1-3,,true,,1166,113,6,6,http://www.nba.com/,55,0,34
+1712452919922,1092,NBA-1,200,OK,10 Users 1-3,text,true,,393485,113,6,6,https://www.nba.com/,771,0,33
+1712452919726,1368,NBA,200,OK,10 Users 1-1,text,true,,394507,226,5,5,https://www.nba.com/,70,0,45
+1712452919726,74,NBA-0,301,Moved Permanently,10 Users 1-1,,true,,1166,113,5,5,http://www.nba.com/,70,0,45
+1712452919801,1293,NBA-1,200,OK,10 Users 1-1,text,true,,393341,113,5,5,https://www.nba.com/,1157,0,154
+1712452920164,1032,NBA,200,OK,10 Users 1-6,text,true,,394375,226,4,4,https://www.nba.com/,37,0,15
+1712452920164,37,NBA-0,301,Moved Permanently,10 Users 1-6,,true,,1166,113,4,4,http://www.nba.com/,37,0,15
+1712452920202,994,NBA-1,200,OK,10 Users 1-6,text,true,,393209,113,4,4,https://www.nba.com/,587,0,40
+1712452920464,1274,NBA,200,OK,10 Users 1-9,text,true,,394471,226,3,3,https://www.nba.com/,42,0,19
+1712452920464,42,NBA-0,301,Moved Permanently,10 Users 1-9,,true,,1166,113,3,3,http://www.nba.com/,42,0,19
+1712452920507,1231,NBA-1,200,OK,10 Users 1-9,text,true,,393305,113,3,3,https://www.nba.com/,1132,0,34
+1712452920564,1176,NBA,200,OK,10 Users 1-10,text,true,,394471,226,2,2,https://www.nba.com/,59,0,15
+1712452920564,59,NBA-0,301,Moved Permanently,10 Users 1-10,,true,,1166,113,2,2,http://www.nba.com/,59,0,15
+1712452920623,1117,NBA-1,200,OK,10 Users 1-10,text,true,,393305,113,2,2,https://www.nba.com/,1020,0,61
+1712452920364,1525,NBA,200,OK,10 Users 1-8,text,true,,394579,226,1,1,https://www.nba.com/,46,0,23
+1712452920364,46,NBA-0,301,Moved Permanently,10 Users 1-8,,true,,1166,113,1,1,http://www.nba.com/,46,0,23
+1712452920410,1479,NBA-1,200,OK,10 Users 1-8,text,true,,393413,113,1,1,https://www.nba.com/,1225,0,33
+1712452930762,791,NBA,200,OK,10 Users 1-3,text,true,,394663,226,10,10,https://www.nba.com/,38,0,15
+1712452930762,38,NBA-0,301,Moved Permanently,10 Users 1-3,,true,,1166,113,10,10,http://www.nba.com/,38,0,15
+1712452930800,753,NBA-1,200,OK,10 Users 1-3,text,true,,393497,113,10,10,https://www.nba.com/,465,0,32
+1712452930666,977,NBA,200,OK,10 Users 1-2,text,true,,394603,226,9,9,https://www.nba.com/,46,0,16
+1712452930666,46,NBA-0,301,Moved Permanently,10 Users 1-2,,true,,1166,113,9,9,http://www.nba.com/,46,0,16
+1712452930713,930,NBA-1,200,OK,10 Users 1-2,text,true,,393437,113,9,9,https://www.nba.com/,815,0,36
+1712452930560,1191,NBA,200,OK,10 Users 1-1,text,true,,394483,226,8,8,https://www.nba.com/,36,0,14
+1712452930560,36,NBA-0,301,Moved Permanently,10 Users 1-1,,true,,1166,113,8,8,http://www.nba.com/,36,0,14
+1712452930597,1154,NBA-1,200,OK,10 Users 1-1,text,true,,393317,113,8,8,https://www.nba.com/,1061,0,36
+1712452931061,694,NBA,200,OK,10 Users 1-6,text,true,,394375,226,7,7,https://www.nba.com/,44,0,15
+1712452931061,44,NBA-0,301,Moved Permanently,10 Users 1-6,,true,,1166,113,7,7,http://www.nba.com/,44,0,15
+1712452931106,649,NBA-1,200,OK,10 Users 1-6,text,true,,393209,113,7,7,https://www.nba.com/,578,0,38
+1712452930872,966,NBA,200,OK,10 Users 1-4,text,true,,394435,226,6,6,https://www.nba.com/,37,0,14
+1712452930872,37,NBA-0,301,Moved Permanently,10 Users 1-4,,true,,1166,113,6,6,http://www.nba.com/,37,0,14
+1712452930910,928,NBA-1,200,OK,10 Users 1-4,text,true,,393269,113,6,6,https://www.nba.com/,850,0,32
+1712452931362,729,NBA,200,OK,10 Users 1-9,text,true,,394615,226,5,5,https://www.nba.com/,41,0,15
+1712452931362,41,NBA-0,301,Moved Permanently,10 Users 1-9,,true,,1166,113,5,5,http://www.nba.com/,41,0,15
+1712452931404,687,NBA-1,200,OK,10 Users 1-9,text,true,,393449,113,5,5,https://www.nba.com/,411,0,34
+1712452931261,1079,NBA,200,OK,10 Users 1-8,text,true,,394519,226,4,4,https://www.nba.com/,35,0,15
+1712452931261,35,NBA-0,301,Moved Permanently,10 Users 1-8,,true,,1166,113,4,4,http://www.nba.com/,35,0,15
+1712452931297,1043,NBA-1,200,OK,10 Users 1-8,text,true,,393353,113,4,4,https://www.nba.com/,982,0,52
+1712452930961,1434,NBA,200,OK,10 Users 1-5,text,true,,394627,226,3,3,https://www.nba.com/,44,0,19
+1712452930961,44,NBA-0,301,Moved Permanently,10 Users 1-5,,true,,1166,113,3,3,http://www.nba.com/,44,0,19
+1712452931005,1390,NBA-1,200,OK,10 Users 1-5,text,true,,393461,113,3,3,https://www.nba.com/,1028,0,32
+1712452931462,994,NBA,200,OK,10 Users 1-10,text,true,,394555,226,2,2,https://www.nba.com/,39,0,14
+1712452931462,39,NBA-0,301,Moved Permanently,10 Users 1-10,,true,,1166,113,2,2,http://www.nba.com/,39,0,14
+1712452931501,955,NBA-1,200,OK,10 Users 1-10,text,true,,393389,113,2,2,https://www.nba.com/,627,0,47
+1712452931160,1552,NBA,200,OK,10 Users 1-7,text,true,,394639,226,1,1,https://www.nba.com/,38,0,14
+1712452931160,38,NBA-0,301,Moved Permanently,10 Users 1-7,,true,,1166,113,1,1,http://www.nba.com/,38,0,14
+1712452931199,1513,NBA-1,200,OK,10 Users 1-7,text,true,,393473,113,1,1,https://www.nba.com/,1213,0,35
+1712452975224,494,NBA,200,OK,10 Users 1-2,text,true,,394375,226,6,6,https://www.nba.com/,41,0,16
+1712452975224,41,NBA-0,301,Moved Permanently,10 Users 1-2,,true,,1166,113,6,6,http://www.nba.com/,41,0,16
+1712452975265,453,NBA-1,200,OK,10 Users 1-2,text,true,,393209,113,6,6,https://www.nba.com/,370,0,41
+1712452975428,581,NBA,200,OK,10 Users 1-4,text,true,,394375,226,8,8,https://www.nba.com/,35,0,14
+1712452975428,35,NBA-0,301,Moved Permanently,10 Users 1-4,,true,,1166,113,8,8,http://www.nba.com/,35,0,14
+1712452975463,546,NBA-1,200,OK,10 Users 1-4,text,true,,393209,113,8,8,https://www.nba.com/,482,0,33
+1712452975521,820,NBA,200,OK,10 Users 1-5,text,true,,394375,226,8,8,https://www.nba.com/,40,0,16
+1712452975521,40,NBA-0,301,Moved Permanently,10 Users 1-5,,true,,1166,113,8,8,http://www.nba.com/,40,0,16
+1712452975561,780,NBA-1,200,OK,10 Users 1-5,text,true,,393209,113,8,8,https://www.nba.com/,703,0,87
+1712452975334,1024,NBA,200,OK,10 Users 1-3,text,true,,394375,226,7,7,https://www.nba.com/,40,0,15
+1712452975334,40,NBA-0,301,Moved Permanently,10 Users 1-3,,true,,1166,113,7,7,http://www.nba.com/,40,0,15
+1712452975374,984,NBA-1,200,OK,10 Users 1-3,text,true,,393209,113,7,7,https://www.nba.com/,889,0,32
+1712452975722,969,NBA,200,OK,10 Users 1-7,text,true,,394471,226,6,6,https://www.nba.com/,41,0,13
+1712452975722,41,NBA-0,301,Moved Permanently,10 Users 1-7,,true,,1166,113,6,6,http://www.nba.com/,41,0,13
+1712452975763,928,NBA-1,200,OK,10 Users 1-7,text,true,,393305,113,6,6,https://www.nba.com/,860,0,32
+1712452975120,1924,NBA,200,OK,10 Users 1-1,text,true,,394459,226,5,5,https://www.nba.com/,60,0,35
+1712452975120,60,NBA-0,301,Moved Permanently,10 Users 1-1,,true,,1166,113,5,5,http://www.nba.com/,60,0,35
+1712452975180,1864,NBA-1,200,OK,10 Users 1-1,text,true,,393293,113,5,5,https://www.nba.com/,1744,0,37
+1712452976035,1057,NBA,200,OK,10 Users 1-10,text,true,,394375,226,4,4,https://www.nba.com/,33,0,14
+1712452976035,33,NBA-0,301,Moved Permanently,10 Users 1-10,,true,,1166,113,4,4,http://www.nba.com/,33,0,14
+1712452976068,1024,NBA-1,200,OK,10 Users 1-10,text,true,,393209,113,4,4,https://www.nba.com/,960,0,197
+1712452975833,1512,NBA,200,OK,10 Users 1-8,text,true,,394615,226,3,3,https://www.nba.com/,56,0,33
+1712452975833,56,NBA-0,301,Moved Permanently,10 Users 1-8,,true,,1166,113,3,3,http://www.nba.com/,56,0,33
+1712452975890,1455,NBA-1,200,OK,10 Users 1-8,text,true,,393449,113,3,3,https://www.nba.com/,776,0,31
+1712452975927,1422,NBA,200,OK,10 Users 1-9,text,true,,394387,226,2,2,https://www.nba.com/,34,0,15
+1712452975927,34,NBA-0,301,Moved Permanently,10 Users 1-9,,true,,1166,113,2,2,http://www.nba.com/,34,0,15
+1712452975961,1388,NBA-1,200,OK,10 Users 1-9,text,true,,393221,113,2,2,https://www.nba.com/,824,0,40
+1712452975628,1766,NBA,200,OK,10 Users 1-6,text,true,,394423,226,1,1,https://www.nba.com/,48,0,18
+1712452975628,48,NBA-0,301,Moved Permanently,10 Users 1-6,,true,,1166,113,1,1,http://www.nba.com/,48,0,18
+1712452975677,1717,NBA-1,200,OK,10 Users 1-6,text,true,,393257,113,1,1,https://www.nba.com/,1555,0,38
+1712452982439,956,NBA,200,OK,10 Users 1-1,text,true,,394531,226,10,10,https://www.nba.com/,47,0,18
+1712452982439,47,NBA-0,301,Moved Permanently,10 Users 1-1,,true,,1166,113,10,10,http://www.nba.com/,47,0,18
+1712452982486,909,NBA-1,200,OK,10 Users 1-1,text,true,,393365,113,10,10,https://www.nba.com/,646,0,35
+1712452982839,753,NBA,200,OK,10 Users 1-5,text,true,,394423,226,9,9,https://www.nba.com/,73,0,49
+1712452982839,73,NBA-0,301,Moved Permanently,10 Users 1-5,,true,,1166,113,9,9,http://www.nba.com/,73,0,49
+1712452982912,680,NBA-1,200,OK,10 Users 1-5,text,true,,393257,113,9,9,https://www.nba.com/,589,0,36
+1712452983038,672,NBA,200,OK,10 Users 1-7,text,true,,394567,226,8,8,https://www.nba.com/,45,0,23
+1712452983038,45,NBA-0,301,Moved Permanently,10 Users 1-7,,true,,1166,113,8,8,http://www.nba.com/,45,0,23
+1712452983083,627,NBA-1,200,OK,10 Users 1-7,text,true,,393401,113,8,8,https://www.nba.com/,435,0,49
+1712452983238,642,NBA,200,OK,10 Users 1-9,text,true,,394375,226,7,7,https://www.nba.com/,37,0,15
+1712452983238,37,NBA-0,301,Moved Permanently,10 Users 1-9,,true,,1166,113,7,7,http://www.nba.com/,37,0,15
+1712452983275,605,NBA-1,200,OK,10 Users 1-9,text,true,,393209,113,7,7,https://www.nba.com/,543,0,33
+1712452982540,1426,NBA,200,OK,10 Users 1-2,text,true,,394495,226,6,6,https://www.nba.com/,41,0,19
+1712452982540,41,NBA-0,301,Moved Permanently,10 Users 1-2,,true,,1166,113,6,6,http://www.nba.com/,41,0,19
+1712452982582,1384,NBA-1,200,OK,10 Users 1-2,text,true,,393329,113,6,6,https://www.nba.com/,1303,0,76
+1712452982638,1331,NBA,200,OK,10 Users 1-3,text,true,,394615,226,5,5,https://www.nba.com/,49,0,22
+1712452982638,49,NBA-0,301,Moved Permanently,10 Users 1-3,,true,,1166,113,5,5,http://www.nba.com/,49,0,22
+1712452982687,1282,NBA-1,200,OK,10 Users 1-3,text,true,,393449,113,5,5,https://www.nba.com/,951,0,40
+1712452982739,1363,NBA,200,OK,10 Users 1-4,text,true,,394423,226,4,4,https://www.nba.com/,51,0,21
+1712452982739,51,NBA-0,301,Moved Permanently,10 Users 1-4,,true,,1166,113,4,4,http://www.nba.com/,51,0,21
+1712452982791,1311,NBA-1,200,OK,10 Users 1-4,text,true,,393257,113,4,4,https://www.nba.com/,1213,0,31
+1712452983341,825,NBA,200,OK,10 Users 1-10,text,true,,394507,226,3,3,https://www.nba.com/,39,0,15
+1712452983341,39,NBA-0,301,Moved Permanently,10 Users 1-10,,true,,1166,113,3,3,http://www.nba.com/,39,0,15
+1712452983380,786,NBA-1,200,OK,10 Users 1-10,text,true,,393341,113,3,3,https://www.nba.com/,696,0,37
+1712452982938,1326,NBA,200,OK,10 Users 1-6,text,true,,394555,226,2,2,https://www.nba.com/,41,0,16
+1712452982938,41,NBA-0,301,Moved Permanently,10 Users 1-6,,true,,1166,113,2,2,http://www.nba.com/,41,0,16
+1712452982979,1285,NBA-1,200,OK,10 Users 1-6,text,true,,393389,113,2,2,https://www.nba.com/,911,0,35
+1712452983138,1374,NBA,200,OK,10 Users 1-8,text,true,,394531,226,1,1,https://www.nba.com/,47,0,23
+1712452983138,47,NBA-0,301,Moved Permanently,10 Users 1-8,,true,,1166,113,1,1,http://www.nba.com/,47,0,23
+1712452983185,1327,NBA-1,200,OK,10 Users 1-8,text,true,,393365,113,1,1,https://www.nba.com/,1195,0,39
+1712452994166,851,NBA,200,OK,10 Users 1-4,text,true,,394567,226,10,10,https://www.nba.com/,45,0,20
+1712452994166,45,NBA-0,301,Moved Permanently,10 Users 1-4,,true,,1166,113,10,10,http://www.nba.com/,45,0,20
+1712452994211,806,NBA-1,200,OK,10 Users 1-4,text,true,,393401,113,10,10,https://www.nba.com/,588,0,38
+1712452994266,780,NBA,200,OK,10 Users 1-5,text,true,,394543,226,9,9,https://www.nba.com/,37,0,15
+1712452994266,37,NBA-0,301,Moved Permanently,10 Users 1-5,,true,,1166,113,9,9,http://www.nba.com/,37,0,15
+1712452994304,742,NBA-1,200,OK,10 Users 1-5,text,true,,393377,113,9,9,https://www.nba.com/,468,0,37
+1712452993865,1204,NBA,200,OK,10 Users 1-1,text,true,,394483,226,8,8,https://www.nba.com/,43,0,15
+1712452993865,43,NBA-0,301,Moved Permanently,10 Users 1-1,,true,,1166,113,8,8,http://www.nba.com/,43,0,15
+1712452993908,1161,NBA-1,200,OK,10 Users 1-1,text,true,,393317,113,8,8,https://www.nba.com/,1008,0,38
+1712452994366,706,NBA,200,OK,10 Users 1-6,text,true,,394375,226,7,7,https://www.nba.com/,42,0,19
+1712452994366,42,NBA-0,301,Moved Permanently,10 Users 1-6,,true,,1166,113,7,7,http://www.nba.com/,42,0,19
+1712452994408,664,NBA-1,200,OK,10 Users 1-6,text,true,,393209,113,7,7,https://www.nba.com/,570,0,42
+1712452994465,849,NBA,200,OK,10 Users 1-7,text,true,,394531,226,6,6,https://www.nba.com/,44,0,18
+1712452994465,44,NBA-0,301,Moved Permanently,10 Users 1-7,,true,,1166,113,6,6,http://www.nba.com/,44,0,18
+1712452994510,804,NBA-1,200,OK,10 Users 1-7,text,true,,393365,113,6,6,https://www.nba.com/,536,0,42
+1712452994067,1355,NBA,200,OK,10 Users 1-3,text,true,,394639,226,5,5,https://www.nba.com/,49,0,20
+1712452994067,49,NBA-0,301,Moved Permanently,10 Users 1-3,,true,,1166,113,5,5,http://www.nba.com/,49,0,20
+1712452994116,1306,NBA-1,200,OK,10 Users 1-3,text,true,,393473,113,5,5,https://www.nba.com/,892,0,37
+1712452994666,765,NBA,200,OK,10 Users 1-9,text,true,,394495,226,4,4,https://www.nba.com/,44,0,17
+1712452994666,44,NBA-0,301,Moved Permanently,10 Users 1-9,,true,,1166,113,4,4,http://www.nba.com/,44,0,17
+1712452994710,721,NBA-1,200,OK,10 Users 1-9,text,true,,393329,113,4,4,https://www.nba.com/,643,0,41
+1712452994567,937,NBA,200,OK,10 Users 1-8,text,true,,394531,226,3,3,https://www.nba.com/,49,0,23
+1712452994567,49,NBA-0,301,Moved Permanently,10 Users 1-8,,true,,1166,113,3,3,http://www.nba.com/,49,0,23
+1712452994616,888,NBA-1,200,OK,10 Users 1-8,text,true,,393365,113,3,3,https://www.nba.com/,519,0,49
+1712452993975,1843,NBA,200,OK,10 Users 1-2,text,true,,394519,226,2,2,https://www.nba.com/,44,0,18
+1712452993975,44,NBA-0,301,Moved Permanently,10 Users 1-2,,true,,1166,113,2,2,http://www.nba.com/,44,0,18
+1712452994019,1799,NBA-1,200,OK,10 Users 1-2,text,true,,393353,113,2,2,https://www.nba.com/,1691,0,41
+1712452994766,1391,NBA,200,OK,10 Users 1-10,text,true,,394555,226,1,1,https://www.nba.com/,40,0,16
+1712452994766,40,NBA-0,301,Moved Permanently,10 Users 1-10,,true,,1166,113,1,1,http://www.nba.com/,40,0,16
+1712452994807,1350,NBA-1,200,OK,10 Users 1-10,text,true,,393389,113,1,1,https://www.nba.com/,791,0,43
