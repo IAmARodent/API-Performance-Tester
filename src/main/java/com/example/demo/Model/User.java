@@ -30,6 +30,10 @@ public class User {
     this.password = password;
   }
 
+  public User(){
+    super();
+  }
+
    public Integer getId() {
      return id;
    }
