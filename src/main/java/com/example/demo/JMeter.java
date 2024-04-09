@@ -2,10 +2,13 @@ package com.example.demo;
 
 //class code referenced from https://www.blazemeter.com/blog/jmeter-command-line
 import org.apache.jmeter.engine.StandardJMeterEngine;
+import org.apache.jmeter.report.dashboard.ReportGenerator;
 import org.apache.jmeter.reporters.ResultCollector;
 import org.apache.jmeter.save.SaveService;
 import org.apache.jmeter.util.JMeterUtils;
 import org.apache.jorphan.collections.HashTree;
+import org.apache.tomcat.util.http.fileupload.FileUtils;
+
 import java.io.File;
 
 public class JMeter {
@@ -18,6 +21,13 @@ public class JMeter {
     {
         File results = new File("results.csv");
         results.delete();
+        try{
+            FileUtils.deleteDirectory(new File("report-output"));
+        }
+        catch(Exception e)
+        {
+            System.out.println(e);
+        }
     }
     public String runTest() throws Exception {
         try{
@@ -44,10 +54,16 @@ public class JMeter {
             result.setFilename(csvResults);
             testPlanTree.add(testPlanTree.getArray()[0], result);
 
+            JMeterUtils.setProperty("jmeter.reportgenerator.exporter.html.classname", "org.apache.jmeter.report.dashboard.HtmlTemplateExporter");
+            JMeterUtils.setProperty("jmeter.reportgenerator.exporter.html.property.output_dir", "report-output");
+
             // Run JMeter Test
             jmeter.configure(testPlanTree);
             jmeter.run();
+            ReportGenerator generator = new ReportGenerator("results.csv", null);
+            generator.generate();
             return "hi";
+
         }
         catch (Exception e) {
             // TODO: handle exception
