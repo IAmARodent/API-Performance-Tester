@@ -14,8 +14,14 @@ public class JMeter {
     {
         return "Success";
     }
+    public void deleteCSV()
+    {
+        File results = new File("results.csv");
+        results.delete();
+    }
     public String runTest() throws Exception {
         try{
+            deleteCSV();
             // JMeter Engine
             StandardJMeterEngine jmeter = new StandardJMeterEngine();
 
