@@ -31,27 +31,29 @@
                     <div class="card-body">
                         <form id="userTestingInput">
                             <div class="mb-3">
-                                <label for="inputName" class="form-label">API Endpoint (URL)</label>
-                                <input type="text" class="form-control" id="inputName"
+                                <label for="inputURL" class="form-label">API Endpoint (URL)</label>
+                                <input type="text" class="form-control" id="url"
                                     placeholder="ie. 'www.google.com'">
                             </div>
                             <div class="mb-3">
-                                <label for="inputEmail" class="form-label">Amount of Users</label>
-                                <input type="email" class="form-control" id="inputEmail" placeholder="(1-500) our servers are limited">
+                                <label for="inputUsers" class="form-label">Amount of Users</label>
+                                <input type="text" class="form-control" id="users"
+                                    placeholder="(1-500) our servers are limited">
                             </div>
                             <div class="mb-3">
-                                <label for="inputPassword" class="form-label">Ramp-up Time</label>
-                                <input type="password" class="form-control" id="inputPassword" placeholder="(time in seconds)">
+                                <label for="inputRamp" class="form-label">Ramp-up Time</label>
+                                <input type="text" class="form-control" id="ramp"
+                                    placeholder="(time in seconds)">
                             </div>
                             <div class="mb-3">
-                                <label for="confirmPassword" class="form-label">Duration</label>
-                                <input type="password" class="form-control" id="confirmPassword"
+                                <label for="inputDuration" class="form-label">Duration</label>
+                                <input type="text" class="form-control" id="duration"
                                     placeholder="(time in seconds)">
                             </div>
                             <div class="dropdown">
                                 <label for="confirmPassword" class="form-label">Server Location</label>
                                 <br>
-                                <select class="form-select" aria-label="Default select example">
+                                <select class="form-select" aria-label="Default select example" id="server">
                                     <option selected>Choose a Geographic Location to Run Your Test</option>
                                     <option value="1">Americas</option>
                                     <option value="2">Europe</option>
@@ -76,6 +78,21 @@
     </div>
 
     <script>
+        document.getElementById('userTestingInput').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Gather form data
+            const formData = {
+                url: document.getElementById('url').value,
+                users: document.getElementById('users').value,
+                ramp: document.getElementById('ramp').value,
+                duration: document.getElementById('duration').value,
+                server: document.getElementById('server').value
+            };
+
+            // Send POST request
+            fetch('/testing/userinputs', {});
+        });
 
     </script>
 

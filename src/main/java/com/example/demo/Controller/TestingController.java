@@ -11,4 +11,12 @@ public class TestingController {
 	public String testing(){
 		return "usertesting";
 	}
+	/**
+	@PostMapping("/testing/userinputs")
+    public long addUser(@RequestBody Input input) {
+        userRepository.save(user);
+        return user.getId();
+    }
+	*/
+
 }

@@ -17,13 +17,27 @@ public class DemoApplication {
 	@GetMapping("/test")
 	public String test()
 	{
-		JMeter pee = new JMeter();
-		String hi;
-		try {
-			hi = pee.runTest();
-		} catch (Exception ignore) {
-			hi = "poop";
+		JMeter jmeter = new JMeter();
+		String temp;
+		/**
+		if(server = americas)
+		{
+			run normal test; will run on current server since this server is located in americas already
 		}
-		return hi;
+		else if(server = europe)
+		{
+			return "www.europedigitalocean.239487234/test" mock europe server ip
+		}
+		else if(server = asia)
+		{
+			return "www.asiadigitalocean.394353/test"  mock asia server ip
+		}
+		*/
+		try {
+			temp = jmeter.runTest();
+		} catch (Exception ignore) {
+			temp = "temp";
+		}
+		return temp;
 	}
 }
