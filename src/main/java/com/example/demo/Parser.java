@@ -246,8 +246,6 @@ public class Parser {
         System.out.println("Ramp Time: " + j.getRampTime());
         System.out.println("Domain: " + j.getDomain());
 
-
-
         System.out.println("----------------------------------------------------");
     
 
@@ -258,6 +256,10 @@ public class Parser {
         System.out.println("Thread Num: " + j.getNumThreads());
         System.out.println("Ramp Time: " + j.getRampTime());
         System.out.println("Domain: " + j.getDomain());
+
+        CSVProperties c = p.parseCSV("results.csv");
+        System.out.println("Avg Response Time: " + c.getAvgResponseTime());
+        System.out.println("Success Rate: " + c.getSuccessRate());
 
 
         /*
