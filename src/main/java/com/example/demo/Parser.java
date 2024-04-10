@@ -34,9 +34,11 @@ public class Parser {
     }
 
     public CSVProperties parseCSV(String csvFilePath) {
+
         int totalResponseTime = 0;
         int successCount = 0;
         int successRate;
+        String humanReadableDate = null;
 
         try {
             File csvFile = new File(csvFilePath);
@@ -44,6 +46,7 @@ public class Parser {
             String line;
             int lineCount = 0; 
             boolean skipHeader = true; // Skip the header line
+            boolean dateObtained = false; // get only first line of timestamp
 
             while ((line = br.readLine()) != null) {
                 if (skipHeader) {
@@ -51,9 +54,14 @@ public class Parser {
                     continue; 
                 }
 
-                 // Read every third line
+                // Read every third line
                 if (lineCount % 3 == 0) { 
                     String[] data = line.split(","); 
+                    if (!dateObtained) {
+                        long epochTimeSeconds = Long.parseLong(data[0]); 
+                        humanReadableDate = new java.text.SimpleDateFormat("MM/dd/yyyy HH:mm:ss").format(new java.util.Date (epochTimeSeconds));
+                        dateObtained = true;
+                    }
                     long responseTime = Long.parseLong(data[1]);
                     totalResponseTime += responseTime;
                     if (data[7].equals("true")) {
@@ -67,9 +75,9 @@ public class Parser {
 
             int testedLines = lineCount / 3;
             double average = (double) totalResponseTime / testedLines;
-            successRate = (successCount / testedLines) * 100;
+            successRate = (int)(((double) successCount / testedLines) * 100);
 
-            return new CSVProperties(average, successRate);
+            return new CSVProperties(average, successRate, humanReadableDate);
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -80,10 +88,12 @@ public class Parser {
     public static class CSVProperties {
         double avgResponseTime = 0;
         int successRate = 0;
+        String humanReadableDate;
 
-        public CSVProperties(double avgResponseTime, int successRate) {
+        public CSVProperties(double avgResponseTime, int successRate, String humanReadableDate) {
             this.avgResponseTime = avgResponseTime;
             this.successRate = successRate;
+            this.humanReadableDate = humanReadableDate;
         }
 
         public double getAvgResponseTime() {
@@ -94,16 +104,17 @@ public class Parser {
             return successRate;
         }
 
+        public String getDate() {
+            return humanReadableDate;
+        }
     }
 
-    // inner class to retrieve JMX properties
     public static class JMXProperties {
         private int numThreads;
         private int rampTime;
         private long duration;
         private String domain;
 
-        // Constructor
         public JMXProperties(int numThreads, int rampTime, long duration, String domain) {
             this.numThreads = numThreads;
             this.rampTime = rampTime;
@@ -143,8 +154,6 @@ public class Parser {
                         Element durationElement = (Element) longProps.item(0);
                         durationElement.setTextContent(String.valueOf(newDuration));
                         duration = newDuration;
-    
-    
                     }
                 } else {
                     System.err.println("ThreadGroup element not found.");
@@ -249,7 +258,7 @@ public class Parser {
         System.out.println("----------------------------------------------------");
     
 
-        //j.editJMXFile("nba.jmx", 100, 100, 100, "www.edit.com");
+        //j.editJMXFile("nba.jmx", 100, 100, 100, "www.edit.com"); // uncomment this to edit
 
         System.out.println("NEW STUFF: ");
         System.out.println("Duration: " + j.getDuration());
@@ -260,11 +269,12 @@ public class Parser {
         CSVProperties c = p.parseCSV("results.csv");
         System.out.println("Avg Response Time: " + c.getAvgResponseTime());
         System.out.println("Success Rate: " + c.getSuccessRate());
+        System.out.println("Date (of first test): " + c.getDate());
 
-
-        /*
+        /*  
          *  import com.example.demo.Parser.CSVProperties;
             import com.example.demo.Parser.JMXProperties;
          */
+
     }
 }
