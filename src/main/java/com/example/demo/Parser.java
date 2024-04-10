@@ -2,13 +2,16 @@ package com.example.demo;
 
 import org.w3c.dom.*;
 import javax.xml.parsers.*;
+import javax.xml.transform.*;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
 import java.io.*;
+import java.lang.Math;
 
 public class Parser {
     private Document doc;
 
     public Parser(String xmlFilePath, String csvFilePath) {
-        
         try {
             if (xmlFilePath != null) {
                 parseXML(xmlFilePath);
@@ -20,7 +23,6 @@ public class Parser {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        
     }
 
     private void parseXML(String xmlFilePath) throws Exception {
@@ -74,7 +76,7 @@ public class Parser {
             return null;
         }
     }
-
+    
     public static class CSVProperties {
         double avgResponseTime = 0;
         int successRate = 0;
@@ -85,7 +87,7 @@ public class Parser {
         }
 
         public double getAvgResponseTime() {
-            return avgResponseTime;
+            return Math.round(avgResponseTime * 100) / 100.0;
         }
 
         public int getSuccessRate() {
@@ -99,12 +101,85 @@ public class Parser {
         private int numThreads;
         private int rampTime;
         private long duration;
+        private String domain;
 
         // Constructor
-        public JMXProperties(int numThreads, int rampTime, long duration) {
+        public JMXProperties(int numThreads, int rampTime, long duration, String domain) {
             this.numThreads = numThreads;
             this.rampTime = rampTime;
             this.duration = duration;
+            this.domain = domain;
+        }
+
+        public void editJMXFile(String filePath, int newNumThreads, int newRampTime, long newDuration, String newDomain) {
+            try {
+                File file = new File(filePath);
+                DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+                DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+                Document doc = dBuilder.parse(file);
+    
+                NodeList threadGroupNodeList = doc.getElementsByTagName("ThreadGroup");
+                if (threadGroupNodeList.getLength() > 0) {
+                    Element threadGroupElement = (Element) threadGroupNodeList.item(0);
+                    NodeList intProps = threadGroupElement.getElementsByTagName("intProp");
+                    NodeList longProps = threadGroupElement.getElementsByTagName("longProp");
+    
+                    // Update numThreads
+                    if (intProps.getLength() > 0) {
+                        Element numThreadsElement = (Element) intProps.item(0);
+                        numThreadsElement.setTextContent(String.valueOf(newNumThreads));
+                        numThreads = newNumThreads;
+                    }
+    
+                    // Update rampTime
+                    if (intProps.getLength() > 1) {
+                        Element rampTimeElement = (Element) intProps.item(1);
+                        rampTimeElement.setTextContent(String.valueOf(newRampTime));
+                        rampTime = newRampTime;
+                    }
+    
+                    // Update duration
+                    if (longProps.getLength() > 0) {
+                        Element durationElement = (Element) longProps.item(0);
+                        durationElement.setTextContent(String.valueOf(newDuration));
+                        duration = newDuration;
+    
+    
+                    }
+                } else {
+                    System.err.println("ThreadGroup element not found.");
+                }
+    
+                    // Update domain property
+                    NodeList httpSamplerNodeList = doc.getElementsByTagName("HTTPSamplerProxy");
+                    if (httpSamplerNodeList.getLength() > 0) {
+                        Element httpSamplerElement = (Element) httpSamplerNodeList.item(0);
+                        NodeList stringProps = httpSamplerElement.getElementsByTagName("stringProp");
+                        for (int i = 0; i < stringProps.getLength(); i++) {
+                            Element stringPropElement = (Element) stringProps.item(i);
+                            String propName = stringPropElement.getAttribute("name");
+                            if ("HTTPSampler.domain".equals(propName)) {
+                                stringPropElement.setTextContent(newDomain);
+                                domain = newDomain;
+                                break;
+                            }
+                        }
+                    } else {
+                        System.err.println("HTTPSamplerProxy element not found.");
+                    }
+                    // Write the updated document back to the file
+                    TransformerFactory transformerFactory = TransformerFactory.newInstance();
+                    Transformer transformer = transformerFactory.newTransformer();
+                    DOMSource source = new DOMSource(doc);
+                    StreamResult result = new StreamResult(file);
+                    transformer.transform(source, result);
+    
+                    System.out.println("JMX file updated successfully.");
+    
+            } catch (Exception e) {
+                e.printStackTrace();
+                System.err.println("Error editing JMX file: " + e.getMessage());
+            }
         }
 
         // Getters
@@ -119,68 +194,70 @@ public class Parser {
         public long getDuration() {
             return duration;
         }
+
+        public String getDomain() {
+            return domain;
+        }
     }    
 
     // Parse threads, ramp time, duration from JMX file
     public JMXProperties parseJMXProperties() {
+        int numThreads;
+        int rampTime;
+        long duration;
+        String domain; 
         try {
             NodeList threadGroupNodeList = doc.getElementsByTagName("ThreadGroup");
             if (threadGroupNodeList.getLength() > 0) {
                 Element threadGroupElement = (Element) threadGroupNodeList.item(0);
-                int numThreads = Integer.parseInt(threadGroupElement.getElementsByTagName("intProp").item(0).getTextContent());
-                int rampTime = Integer.parseInt(threadGroupElement.getElementsByTagName("intProp").item(1).getTextContent());
-                long duration = Long.parseLong(threadGroupElement.getElementsByTagName("longProp").item(0).getTextContent());
+                numThreads = Integer.parseInt(threadGroupElement.getElementsByTagName("intProp").item(0).getTextContent());
+                rampTime = Integer.parseInt(threadGroupElement.getElementsByTagName("intProp").item(1).getTextContent());
+                duration = Long.parseLong(threadGroupElement.getElementsByTagName("longProp").item(0).getTextContent());
 
-                return new JMXProperties(numThreads, rampTime, duration);
             } else {
                 System.err.println("ThreadGroup element not found.");
                 return null;
             }
-        } catch (Exception e) {
-            e.printStackTrace();
-            return null;
-        }
-    }
 
-    public String getPropertyFromHttpSampler(String propertyName) {
-        try {
             NodeList httpSamplerNodeList = doc.getElementsByTagName("HTTPSamplerProxy");
             if (httpSamplerNodeList.getLength() > 0) {
                 Element httpSamplerElement = (Element) httpSamplerNodeList.item(0);
-                if ("testname".equals(propertyName)) {
-                    return httpSamplerElement.getAttribute(propertyName);
-                } else {
-                    return httpSamplerElement.getElementsByTagName("stringProp").item(0).getTextContent();
-                }
+                domain = httpSamplerElement.getElementsByTagName("stringProp").item(0).getTextContent();
             } else {
                 System.err.println("HTTPSamplerProxy element not found.");
                 return null;
             }
+
+        return new JMXProperties(numThreads, rampTime, duration, domain);
+
         } catch (Exception e) {
             e.printStackTrace();
             return null;
         }
     }
-    
-    public String parseDomain() {
-        return getPropertyFromHttpSampler("HTTPSampler.domain");
-    }
-    
-    public String parseTestName() {
-        return getPropertyFromHttpSampler("testname");
-    }
 
     public static void main(String[] args) {
         Parser p = new Parser("nba.jmx", "results.csv"); 
+        
         JMXProperties j = p.parseJMXProperties();
-        CSVProperties c = p.parseCSV("results.csv");
+        System.out.println("INITIAL .JMX INFORMATION");
         System.out.println("Duration: " + j.getDuration());
         System.out.println("Thread Num: " + j.getNumThreads());
         System.out.println("Ramp Time: " + j.getRampTime());
-        System.out.println("Domain: " + p.parseDomain());
-        System.out.println("Avg Response Time: " + c.getAvgResponseTime());
-        System.out.println("Test Name: " + p.parseTestName());
-        System.out.println("Success Rate: " + c.getSuccessRate());
+        System.out.println("Domain: " + j.getDomain());
+
+
+
+        System.out.println("----------------------------------------------------");
+    
+
+        //j.editJMXFile("nba.jmx", 100, 100, 100, "www.edit.com");
+
+        System.out.println("NEW STUFF: ");
+        System.out.println("Duration: " + j.getDuration());
+        System.out.println("Thread Num: " + j.getNumThreads());
+        System.out.println("Ramp Time: " + j.getRampTime());
+        System.out.println("Domain: " + j.getDomain());
 
 
         /*
