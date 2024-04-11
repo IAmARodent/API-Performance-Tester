@@ -1,12 +1,16 @@
 package com.example.demo;
 
 import org.w3c.dom.*;
+
+import com.example.demo.Model.TestResults;
+
 import javax.xml.parsers.*;
 import javax.xml.transform.*;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import java.io.*;
 import java.lang.Math;
+import java.util.ArrayList;
 
 public class Parser {
     private Document doc;
@@ -283,5 +287,15 @@ public class Parser {
         Parser p = new Parser("nba.jmx", "results.csv"); 
         JMXProperties j = p.parseJMXProperties();
         j.editJMXFile("nba.jmx", users, ramptime, duration, url);
+    }
+    public static TestResults something2()
+    {
+        Parser p = new Parser("nba.jmx", "results.csv"); 
+        CSVProperties c = p.parseCSV("results.csv");
+        TestResults results = new TestResults();
+        results.setResponseTime(c.getAvgResponseTime());
+        results.setSuccessRate(c.getSuccessRate());
+        results.setDate(c.getDate());
+        return results;
     }
 }

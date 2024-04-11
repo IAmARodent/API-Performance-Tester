@@ -39,13 +39,13 @@ public class Test {
     private Double averageresponsetime;
 
     @Column
-    private Double successrate;
+    private int successrate;
 
     @Column
     private String htmlreportlink;
 
     public Test(int userid, String datetime, String url, int users, int rampup, int duration,
-            String serverlocation, Double averageresponsetime, Double successrate, String htmlreportlink) {
+            String serverlocation, Double averageresponsetime, int successrate, String htmlreportlink) {
         super();
         this.userid = userid;
         this.datetime = datetime;
@@ -131,11 +131,11 @@ public class Test {
         this.averageresponsetime = averageresponsetime;
     }
 
-    public Double getSuccessrate() {
+    public int getSuccessrate() {
         return successrate;
     }
 
-    public void setSuccessrate(Double successrate) {
+    public void setSuccessrate(int successrate) {
         this.successrate = successrate;
     }
 
