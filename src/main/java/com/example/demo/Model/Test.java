@@ -10,146 +10,142 @@ import jakarta.persistence.Id;
 @Entity
 @Table
 public class Test {
-    @Column
-    private int UserID;
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int TestID;
+    private int testid;
 
     @Column
-    private String DateTime;
+    private int userid;
 
     @Column
-    private String URL;
+    private String datetime;
 
     @Column
-    private int NoOfUsers;
+    private String url;
 
     @Column
-    private int RampUpTime;
+    private int users;
 
     @Column
-    private int DurationTime;
+    private int rampup;
 
     @Column
-    private String ServerLocation;
+    private int duration;
 
     @Column
-    private Double AverageResponseTime;
+    private String serverlocation;
 
     @Column
-    private Double SuccessRate;
+    private Double averageresponsetime;
 
     @Column
-    private Double HTMLReportLink;
+    private Double successrate;
 
-    public Test(int UserID, int TestID, String DateTime, String URL, int NoOfUsers, int RampUpTime, int DurationTime,
-            String ServerLocation, Double AverageResponseTime, Double SuccessRate, Double HTMLReportLink) {
+    @Column
+    private String htmlreportlink;
+
+    public Test(int userid, String datetime, String url, int users, int rampup, int duration,
+            String serverlocation, Double averageresponsetime, Double successrate, String htmlreportlink) {
         super();
-        this.UserID = UserID;
-        this.TestID = TestID;
-        this.DateTime = DateTime;
-        this.URL = URL;
-        this.NoOfUsers = NoOfUsers;
-        this.RampUpTime = RampUpTime;
-        this.DurationTime = DurationTime;
-        this.ServerLocation = ServerLocation;
-        this.AverageResponseTime = AverageResponseTime;
-        this.SuccessRate = SuccessRate;
-        this.HTMLReportLink = HTMLReportLink;
+        this.userid = userid;
+        this.datetime = datetime;
+        this.url = url;
+        this.users = users;
+        this.rampup = rampup;
+        this.duration = duration;
+        this.serverlocation = serverlocation;
+        this.averageresponsetime = averageresponsetime;
+        this.successrate = successrate;
+        this.htmlreportlink = htmlreportlink;
     }
 
-    public Test() {
-        super();
+    public int getTestid() {
+        return testid;
     }
 
-    public int getUserID() {
-        return UserID;
+    public void setTestid(int testid) {
+        this.testid = testid;
     }
 
-    public void setUserID(int userID) {
-        UserID = userID;
+    public int getUserid() {
+        return userid;
     }
 
-    public int getTestID() {
-        return TestID;
+    public void setUserid(int userid) {
+        this.userid = userid;
     }
 
-    public void setTestID(int testID) {
-        TestID = testID;
+    public String getDatetime() {
+        return datetime;
     }
 
-    public String getDateTime() {
-        return DateTime;
+    public void setDatetime(String datetime) {
+        this.datetime = datetime;
     }
 
-    public void setDateTime(String dateTime) {
-        DateTime = dateTime;
+    public String getUrl() {
+        return url;
     }
 
-    public String getURL() {
-        return URL;
+    public void setUrl(String url) {
+        this.url = url;
     }
 
-    public void setURL(String uRL) {
-        URL = uRL;
+    public int getUsers() {
+        return users;
     }
 
-    public int getNoOfUsers() {
-        return NoOfUsers;
+    public void setUsers(int users) {
+        this.users = users;
     }
 
-    public void setNoOfUsers(int noOfUsers) {
-        NoOfUsers = noOfUsers;
+    public int getRampup() {
+        return rampup;
     }
 
-    public int getRampUpTime() {
-        return RampUpTime;
+    public void setRampup(int rampup) {
+        this.rampup = rampup;
     }
 
-    public void setRampUpTime(int rampUpTime) {
-        RampUpTime = rampUpTime;
+    public int getDuration() {
+        return duration;
     }
 
-    public int getDurationTime() {
-        return DurationTime;
+    public void setDuration(int duration) {
+        this.duration = duration;
     }
 
-    public void setDurationTime(int durationTime) {
-        DurationTime = durationTime;
+    public String getServerlocation() {
+        return serverlocation;
     }
 
-    public String getServerLocation() {
-        return ServerLocation;
+    public void setServerlocation(String serverlocation) {
+        this.serverlocation = serverlocation;
     }
 
-    public void setServerLocation(String serverLocation) {
-        ServerLocation = serverLocation;
+    public Double getAverageresponsetime() {
+        return averageresponsetime;
     }
 
-    public Double getAverageResponseTime() {
-        return AverageResponseTime;
+    public void setAverageresponsetime(Double averageresponsetime) {
+        this.averageresponsetime = averageresponsetime;
     }
 
-    public void setAverageResponseTime(Double averageResponseTime) {
-        AverageResponseTime = averageResponseTime;
+    public Double getSuccessrate() {
+        return successrate;
     }
 
-    public Double getSuccessRate() {
-        return SuccessRate;
+    public void setSuccessrate(Double successrate) {
+        this.successrate = successrate;
     }
 
-    public void setSuccessRate(Double successRate) {
-        SuccessRate = successRate;
+    public String getHtmlreportlink() {
+        return htmlreportlink;
     }
 
-    public Double getHTMLReportLink() {
-        return HTMLReportLink;
+    public void setHtmlreportlink(String htmlreportlink) {
+        this.htmlreportlink = htmlreportlink;
     }
 
-    public void setHTMLReportLink(Double hTMLReportLink) {
-        HTMLReportLink = hTMLReportLink;
-    }
-
+    
 }

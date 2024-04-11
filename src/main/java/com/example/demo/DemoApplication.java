@@ -18,6 +18,8 @@ public class DemoApplication {
 	public String test()
 	{
 		JMeter jmeter = new JMeter();
+        Parser p = new Parser("nba.jmx", "results.csv"); 
+        JMXProperties j = p.parseJMXProperties();
 		String temp;
 		/**
 		if(server = americas)
