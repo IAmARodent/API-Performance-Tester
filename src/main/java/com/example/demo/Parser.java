@@ -277,4 +277,11 @@ public class Parser {
          */
 
     }
+
+    public static void something(int users, int ramptime, int duration, String url)
+    {
+        Parser p = new Parser("nba.jmx", "results.csv"); 
+        JMXProperties j = p.parseJMXProperties();
+        j.editJMXFile("nba.jmx", users, ramptime, duration, url);
+    }
 }

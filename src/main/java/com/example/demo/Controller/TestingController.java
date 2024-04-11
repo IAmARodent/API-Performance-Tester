@@ -21,8 +21,6 @@ public class TestingController {
 
 	@PostMapping("/testing/userinputs")
     public void addUser(@RequestBody Test test) {
-		System.out.println("ajlksdjfalsdjfad\n");
-		System.out.println(test.getUserid());
 		testRepository.save(test);
     }
 

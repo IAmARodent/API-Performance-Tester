@@ -17,9 +17,13 @@ public class DemoApplication {
 	@GetMapping("/test")
 	public String test()
 	{
+		
+		int users = 10;
+		int rampup = 1;
+		int duration = 10; 
+		String url = "www.agoda.com";
 		JMeter jmeter = new JMeter();
-        Parser p = new Parser("nba.jmx", "results.csv"); 
-        JMXProperties j = p.parseJMXProperties();
+        Parser.something(users,rampup,duration,url);
 		String temp;
 		/**
 		if(server = americas)
