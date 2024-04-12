@@ -1,6 +1,7 @@
 package com.example.demo;
 
 import java.util.ArrayList;
+import java.util.UUID;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -47,7 +48,10 @@ public class DemoApplication {
 		*/
 		try {
 			temp = jmeter.runTest();
-			results = Parser.something2();
+			String bye = UUID.randomUUID().toString();
+			results = Parser.something2(bye);
+			UploadDirectory.uploadDir("report-output", "api-load-tester-html-reports", bye, true, false);
+			MakeAllObjectPublic.doIt();
 		} catch (Exception ignore) {
 			temp = "temp";
 		}
@@ -59,7 +63,9 @@ public class DemoApplication {
 	public int uploadtest()
 	{
 		try{
-			UploadDirectory.uploadDir("report-output", "api-load-tester-html-reports", "asdfasdf", true, false);
+			String hi = UUID.randomUUID().toString();
+			UploadDirectory.uploadDir("report-output", "api-load-tester-html-reports", hi, true, false);
+			MakeAllObjectPublic.doIt();
 		}
 		catch (Exception ignore){
 			ignore.printStackTrace();

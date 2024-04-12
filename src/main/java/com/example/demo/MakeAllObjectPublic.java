@@ -1,6 +1,8 @@
 package com.example.demo;
-//adopted from AWS Java SDK Documentation Example Code
 
+import com.amazonaws.services.s3.AmazonS3;
+import com.amazonaws.services.s3.AmazonS3ClientBuilder;
+import com.amazonaws.services.s3.model.*;
 import com.amazonaws.AmazonServiceException;
 import com.amazonaws.services.directory.model.RegionsInfo;
 import com.amazonaws.services.s3.AmazonS3;
@@ -15,13 +17,14 @@ import com.amazonaws.auth.DefaultAWSCredentialsProviderChain;
 import com.amazonaws.client.builder.AwsClientBuilder;
 import com.amazonaws.regions.Regions;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.List;
 
-public class UploadDirectory {
-    public static void uploadDir(String dir_path, String bucket_name, String key_prefix, boolean recursive,
-            boolean pause) {
+public class MakeAllObjectPublic {
+
+    public static void doIt() {
+        // Replace "your-bucket-name" with your actual bucket name
+        String bucketName = "api-load-tester-html-reports";
+
         String accessKeyId = "DO00K9G63VXHVGDU3WU6";
         String secretAccessKey = "trpALBZA2AUxUBHssaPqm+vHN24U1zO23RAd1WYj83o";
 
@@ -40,23 +43,26 @@ public class UploadDirectory {
         // Build the S3 client
         AmazonS3 s3Client = s3ClientBuilder.build();
 
-        // Create TransferManager object
-        TransferManager xfer_mgr = TransferManagerBuilder.standard()
-                .withS3Client(s3Client)
-                .build();
-        try {
-            MultipleFileUpload xfer = xfer_mgr.uploadDirectory(bucket_name,
-                    key_prefix, new File(dir_path), recursive);
-            // loop with Transfer.isDone()
-            XferMgrProgress.showTransferProgress(xfer);
-            // or block with Transfer.waitForCompletion()
-            XferMgrProgress.waitForCompletion(xfer);
-        } catch (AmazonServiceException e) {
-            System.err.println(e.getErrorMessage());
-            System.exit(1);
-        }
-        xfer_mgr.shutdownNow();
-    }
 
-    
+        // List all objects in the bucket
+        ObjectListing objectListing = s3Client.listObjects(bucketName);
+        List<S3ObjectSummary> objectSummaries = objectListing.getObjectSummaries();
+
+        for (S3ObjectSummary objectSummary : objectSummaries) {
+            String objectKey = objectSummary.getKey();
+
+            // Get the existing ACL for the object
+            AccessControlList acl = s3Client.getObjectAcl(bucketName, objectKey);
+
+            // Grant permission to the 'AllUsers' group to read the object
+            acl.grantPermission(GroupGrantee.AllUsers, Permission.Read);
+
+            // Set the modified ACL back to the object
+            s3Client.setObjectAcl(new SetObjectAclRequest(bucketName, objectKey, acl));
+
+            System.out.println("Object " + objectKey + " in bucket " + bucketName + " is now public.");
+        }
+
+        System.out.println("All objects in bucket " + bucketName + " are now public.");
+    }
 }
