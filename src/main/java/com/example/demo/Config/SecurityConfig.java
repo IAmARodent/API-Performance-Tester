@@ -36,29 +36,17 @@ public class SecurityConfig {
                                  .requestMatchers("/signup").permitAll()
                                  .requestMatchers("/user/add").permitAll()
                                  .requestMatchers("/login").permitAll()
+                                 .requestMatchers("/dashboard").hasRole("USER")
                                  .anyRequest().authenticated()
+
                  )
                  .csrf(AbstractHttpConfigurer::disable)
                  .userDetailsService(jpaUserDetailService)
                  .formLogin(login -> login
                          .loginPage("/login")
-                         .defaultSuccessUrl("/dashboard", true));
-            //.logout((logout) -> logout.logoutUrl("/logout"));
+                         .defaultSuccessUrl("/dashboard", true))
+            .logout((logout) -> logout.logoutUrl("/logout"));
         return http.build();
-    }
-
-    public UserDetailsService users() {
-        UserDetails user = User.builder()
-                .username("testuser1")
-                .password("{noop}tABwq6tdkrm7hyueYIbn4A==")
-                .roles("USER")
-                .build();
-        UserDetails admin = User.builder()
-                .username("admin")
-                .password("{noop}123")
-                .roles("USER", "ADMIN")
-                .build();
-        return new InMemoryUserDetailsManager(user, admin);
     }
 
     @Bean

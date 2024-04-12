@@ -1,3 +1,4 @@
+package com.example.demo;
 
 //adopted from AWS Java SDK Documentation Example Code
 import org.slf4j.Logger;
