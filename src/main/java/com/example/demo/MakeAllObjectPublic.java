@@ -21,7 +21,7 @@ import java.util.List;
 
 public class MakeAllObjectPublic {
 
-    public static void doIt() {
+    public static void doIt(String link) {
         // Replace "your-bucket-name" with your actual bucket name
         String bucketName = "api-load-tester-html-reports";
 
@@ -43,10 +43,14 @@ public class MakeAllObjectPublic {
         // Build the S3 client
         AmazonS3 s3Client = s3ClientBuilder.build();
 
+        // Create a request to list objects under the folder prefix
+        ListObjectsV2Request request = new ListObjectsV2Request()
+                .withBucketName(bucketName)
+                .withPrefix(link);
 
-        // List all objects in the bucket
-        ObjectListing objectListing = s3Client.listObjects(bucketName);
-        List<S3ObjectSummary> objectSummaries = objectListing.getObjectSummaries();
+        // List objects under the folder prefix
+        ListObjectsV2Result result = s3Client.listObjectsV2(request);
+        List<S3ObjectSummary> objectSummaries = result.getObjectSummaries();
 
         for (S3ObjectSummary objectSummary : objectSummaries) {
             String objectKey = objectSummary.getKey();

@@ -51,7 +51,7 @@ public class DemoApplication {
 			String bye = UUID.randomUUID().toString();
 			results = Parser.something2(bye);
 			UploadDirectory.uploadDir("report-output", "api-load-tester-html-reports", bye, true, false);
-			MakeAllObjectPublic.doIt();
+			MakeAllObjectPublic.doIt(bye);
 		} catch (Exception ignore) {
 			temp = "temp";
 		}
@@ -65,7 +65,7 @@ public class DemoApplication {
 		try{
 			String hi = UUID.randomUUID().toString();
 			UploadDirectory.uploadDir("report-output", "api-load-tester-html-reports", hi, true, false);
-			MakeAllObjectPublic.doIt();
+			//MakeAllObjectPublic.doIt();
 		}
 		catch (Exception ignore){
 			ignore.printStackTrace();
