@@ -1,7 +1,10 @@
 package com.example.demo.Controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.server.ResponseStatusException;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -9,6 +12,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import org.springframework.security.crypto.bcrypt.BCrypt;
 import java.util.List;
 
 import com.example.demo.Model.User;
@@ -22,9 +26,40 @@ public class UserController {
     UserRepository userRepository;
 
     @PostMapping("/add")
-    public long addUser(@RequestBody User user) {
-        userRepository.save(user);
-        return user.getId();
+    public String addUser(@RequestBody User user) {
+        String username = user.getUserame();
+        String email = user.getEmail();
+        String plaintext = user.getPassword();
+
+        if (userRepository.getUsername(username) != null){
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Username is already in use");
+        } else {
+            if (userRepository.getEmail(email) != null){
+                throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Email is already in use");
+            }
+            user.setPassword(BCrypt.hashpw(plaintext, BCrypt.gensalt()));
+            userRepository.save(user);
+            return "{\"message\": \"Registration Sucessful.\"}";
+        }
+    }
+    
+    @PostMapping("/login")
+    public String loginUser(@RequestBody User user) {
+        /*
+         * 
+         String email = user.getEmail();
+         String password = user.getPassword();
+         User target = userRepository.findByEmail(email);
+         String targetPass = target.getPassword();
+         targetPass = gen.decrypt(targetPass);
+         System.out.println(targetPass);
+         if (password.equals(targetPass)){
+             return "{\"message\": \"Login.\"}";
+         } else {
+             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Incorrect Email or Password!");
+         }
+         */
+        return null;
     }
 
     @GetMapping("/get")
@@ -43,12 +78,18 @@ public class UserController {
     @GetMapping("/email")
     public String getEmail(String email) {
         String target = userRepository.getEmail(email);
+        if (target == null){
+            target = "{}";
+        }
         return target;
     }
     
     @GetMapping("/username")
     public String getUsername(String username) {
         String target = userRepository.getUsername(username);
+        if (target == null){
+            target = "{}";
+        }
         return target;
     }
 
@@ -63,5 +104,6 @@ public class UserController {
         String target = userRepository.getId(email);
         return target;
     }
+
     
 }

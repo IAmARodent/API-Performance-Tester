@@ -6,14 +6,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @Controller
-public class LoginController {
-	@GetMapping("/login")
-	public String login(){
-		return "login";
-	}
+public class DashboardController {
 
-	@GetMapping("/logout")
-	public String logout(){
-		return "login";
+	@GetMapping("/dashboard")
+	public String dashboard(){
+		return "dashboard";
 	}
 }

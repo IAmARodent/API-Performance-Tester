@@ -14,24 +14,36 @@ public class User {
   @GeneratedValue(strategy=GenerationType.IDENTITY)
   private Integer id;
 
-  @Column
+  @Column(unique=true)
   private String username;
 
-  @Column
+  @Column(unique=true)
   private String email;
 
   @Column
   private String password;
 
-  public User(String username, String email, String password){
+  @Column
+  private String roles;
+
+  public User(String username, String email, String password, String roles){
     super();
     this.username = username;
     this.email = email;
     this.password = password;
+    this.roles = roles;
   }
 
   public User(){
     super();
+  }
+
+
+  public String getRoles() {
+    return roles;
+  }
+  public void setRoles(String roles) {
+    this.roles = roles;
   }
 
    public Integer getId() {
@@ -42,12 +54,12 @@ public class User {
      this.id = id;
    }
  
-   public String getName() {
+   public String getUserame() {
      return username;
    }
  
-   public void setName(String name) {
-     this.username = name;
+   public void setUsername(String username) {
+     this.username = username;
    }
  
    public String getEmail() {
