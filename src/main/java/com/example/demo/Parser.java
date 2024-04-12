@@ -288,7 +288,7 @@ public class Parser {
         JMXProperties j = p.parseJMXProperties();
         j.editJMXFile("nba.jmx", users, ramptime, duration, url);
     }
-    public static TestResults something2()
+    public static TestResults something2(String link)
     {
         Parser p = new Parser("nba.jmx", "results.csv"); 
         CSVProperties c = p.parseCSV("results.csv");
@@ -296,7 +296,7 @@ public class Parser {
         results.setResponseTime(c.getAvgResponseTime());
         results.setSuccessRate(c.getSuccessRate());
         results.setDate(c.getDate());
-        results.setHtmlreportlink("randomlinkinsertedhere");
+        results.setHtmlreportlink("https://api-load-tester-html-reports.nyc3.digitaloceanspaces.com/" + link + "/index.html");        
         return results;
     }
 }

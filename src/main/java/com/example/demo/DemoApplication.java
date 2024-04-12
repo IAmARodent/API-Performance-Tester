@@ -1,10 +1,12 @@
 package com.example.demo;
 
 import java.util.ArrayList;
+import java.util.UUID;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -46,11 +48,28 @@ public class DemoApplication {
 		*/
 		try {
 			temp = jmeter.runTest();
-			results = Parser.something2();
+			String bye = UUID.randomUUID().toString();
+			results = Parser.something2(bye);
+			UploadDirectory.uploadDir("report-output", "api-load-tester-html-reports", bye, true, false);
+			MakeAllObjectPublic.doIt(bye);
 		} catch (Exception ignore) {
 			temp = "temp";
 		}
 
 		return results;
+	}
+
+	@GetMapping("/uploadtest")
+	public int uploadtest()
+	{
+		try{
+			String hi = UUID.randomUUID().toString();
+			UploadDirectory.uploadDir("report-output", "api-load-tester-html-reports", hi, true, false);
+			//MakeAllObjectPublic.doIt();
+		}
+		catch (Exception ignore){
+			ignore.printStackTrace();
+		}
+		return 1;
 	}
 }
