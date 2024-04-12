@@ -296,6 +296,7 @@ public class Parser {
         results.setResponseTime(c.getAvgResponseTime());
         results.setSuccessRate(c.getSuccessRate());
         results.setDate(c.getDate());
+        results.setHtmlreportlink("randomlinkinsertedhere");
         return results;
     }
 }

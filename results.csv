@@ -1,43 +1,283 @@
 timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
-1712817341139,577,NBA,200,OK,10 Users 1-1,text,true,,809339,228,1,1,https://www.nfl.com/,189,0,70
-1712817341139,193,NBA-0,301,Moved Permanently,10 Users 1-1,,true,,353,114,1,1,http://www.nfl.com/,189,0,70
-1712817341335,381,NBA-1,200,OK,10 Users 1-1,text,true,,808986,114,1,1,https://www.nfl.com/,271,0,229
-1712817341718,180,NBA,200,OK,10 Users 1-1,text,true,,809337,228,1,1,https://www.nfl.com/,128,0,17
-1712817341718,128,NBA-0,301,Moved Permanently,10 Users 1-1,,true,,353,114,1,1,http://www.nfl.com/,128,0,17
-1712817341846,52,NBA-1,200,OK,10 Users 1-1,text,true,,808984,114,1,1,https://www.nfl.com/,21,0,0
-1712817341898,186,NBA,200,OK,10 Users 1-1,text,true,,809337,228,2,2,https://www.nfl.com/,130,0,19
-1712817341898,130,NBA-0,301,Moved Permanently,10 Users 1-1,,true,,353,114,2,2,http://www.nfl.com/,130,0,19
-1712817342029,55,NBA-1,200,OK,10 Users 1-1,text,true,,808984,114,2,2,https://www.nfl.com/,16,0,0
-1712817342085,127,NBA,200,OK,10 Users 1-1,text,true,,809337,228,2,2,https://www.nfl.com/,64,0,19
-1712817342085,64,NBA-0,301,Moved Permanently,10 Users 1-1,,true,,353,114,2,2,http://www.nfl.com/,64,0,19
-1712817342150,62,NBA-1,200,OK,10 Users 1-1,text,true,,808984,114,2,2,https://www.nfl.com/,20,0,0
-1712817342213,153,NBA,200,OK,10 Users 1-1,text,true,,809337,228,2,2,https://www.nfl.com/,95,0,42
-1712817342213,95,NBA-0,301,Moved Permanently,10 Users 1-1,,true,,353,114,2,2,http://www.nfl.com/,95,0,42
-1712817342308,58,NBA-1,200,OK,10 Users 1-1,text,true,,808984,114,2,2,https://www.nfl.com/,18,0,0
-1712817342371,132,NBA,200,OK,10 Users 1-1,text,true,,809337,228,2,2,https://www.nfl.com/,73,0,28
-1712817342371,73,NBA-0,301,Moved Permanently,10 Users 1-1,,true,,353,114,2,2,http://www.nfl.com/,73,0,28
-1712817342444,59,NBA-1,200,OK,10 Users 1-1,text,true,,808984,114,2,2,https://www.nfl.com/,17,0,0
-1712817342041,476,NBA,200,OK,10 Users 1-2,text,true,,809337,228,2,2,https://www.nfl.com/,66,0,23
-1712817342041,66,NBA-0,301,Moved Permanently,10 Users 1-2,,true,,353,114,2,2,http://www.nfl.com/,66,0,23
-1712817342108,409,NBA-1,200,OK,10 Users 1-2,text,true,,808984,114,2,2,https://www.nfl.com/,130,0,92
-1712817342504,118,NBA,200,OK,10 Users 1-1,text,true,,809337,228,2,2,https://www.nfl.com/,72,0,23
-1712817342504,72,NBA-0,301,Moved Permanently,10 Users 1-1,,true,,353,114,2,2,http://www.nfl.com/,72,0,23
-1712817342577,45,NBA-1,200,OK,10 Users 1-1,text,true,,808984,114,2,2,https://www.nfl.com/,15,0,0
-1712817342623,120,NBA,200,OK,10 Users 1-1,text,true,,809337,228,2,2,https://www.nfl.com/,64,0,20
-1712817342623,64,NBA-0,301,Moved Permanently,10 Users 1-1,,true,,353,114,2,2,http://www.nfl.com/,64,0,20
-1712817342688,55,NBA-1,200,OK,10 Users 1-1,text,true,,808984,114,2,2,https://www.nfl.com/,20,0,0
-1712817342518,292,NBA,200,OK,10 Users 1-2,text,true,,809337,228,2,2,https://www.nfl.com/,87,0,18
-1712817342518,87,NBA-0,301,Moved Permanently,10 Users 1-2,,true,,353,114,2,2,http://www.nfl.com/,87,0,18
-1712817342605,205,NBA-1,200,OK,10 Users 1-2,text,true,,808984,114,2,2,https://www.nfl.com/,21,0,0
-1712817342744,116,NBA,200,OK,10 Users 1-1,text,true,,809337,228,2,2,https://www.nfl.com/,68,0,21
-1712817342744,68,NBA-0,301,Moved Permanently,10 Users 1-1,,true,,353,114,2,2,http://www.nfl.com/,68,0,21
-1712817342812,48,NBA-1,200,OK,10 Users 1-1,text,true,,808984,114,2,2,https://www.nfl.com/,18,0,0
-1712817342862,110,NBA,200,OK,10 Users 1-1,text,true,,809337,228,2,2,https://www.nfl.com/,59,0,16
-1712817342862,59,NBA-0,301,Moved Permanently,10 Users 1-1,,true,,353,114,2,2,http://www.nfl.com/,59,0,16
-1712817342921,51,NBA-1,200,OK,10 Users 1-1,text,true,,808984,114,2,2,https://www.nfl.com/,18,0,0
-1712817342811,233,NBA,200,OK,10 Users 1-2,text,true,,809337,228,2,2,https://www.nfl.com/,77,0,22
-1712817342811,77,NBA-0,301,Moved Permanently,10 Users 1-2,,true,,353,114,2,2,http://www.nfl.com/,77,0,22
-1712817342888,156,NBA-1,200,OK,10 Users 1-2,text,true,,808984,114,2,2,https://www.nfl.com/,15,0,0
-1712817342974,119,NBA,200,OK,10 Users 1-1,text,true,,809338,228,1,1,https://www.nfl.com/,70,0,21
-1712817342974,70,NBA-0,301,Moved Permanently,10 Users 1-1,,true,,353,114,1,1,http://www.nfl.com/,70,0,21
-1712817343044,49,NBA-1,200,OK,10 Users 1-1,text,true,,808985,114,1,1,https://www.nfl.com/,18,0,0
+1712878227004,467,NBA,200,OK,10 Users 1-1,text,true,,196300,232,4,4,https://www.agoda.com/,153,0,56
+1712878227004,153,NBA-0,301,Moved Permanently,10 Users 1-1,,true,,527,116,4,4,http://www.agoda.com/,153,0,56
+1712878227158,313,NBA-1,200,OK,10 Users 1-1,text,true,,195773,116,4,4,https://www.agoda.com/,251,0,51
+1712878227138,442,NBA,200,OK,10 Users 1-2,text,true,,195889,232,5,5,https://www.agoda.com/,111,0,20
+1712878227138,111,NBA-0,301,Moved Permanently,10 Users 1-2,,true,,527,116,5,5,http://www.agoda.com/,111,0,20
+1712878227249,331,NBA-1,200,OK,10 Users 1-2,text,true,,195362,116,5,5,https://www.agoda.com/,256,0,57
+1712878227471,260,NBA,200,OK,10 Users 1-1,text,true,,196385,232,6,6,https://www.agoda.com/,97,0,0
+1712878227471,97,NBA-0,301,Moved Permanently,10 Users 1-1,,true,,527,116,6,6,http://www.agoda.com/,97,0,0
+1712878227568,163,NBA-1,200,OK,10 Users 1-1,text,true,,195858,116,6,6,https://www.agoda.com/,144,0,0
+1712878227580,254,NBA,200,OK,10 Users 1-2,text,true,,196005,232,7,7,https://www.agoda.com/,101,0,0
+1712878227580,101,NBA-0,301,Moved Permanently,10 Users 1-2,,true,,527,116,7,7,http://www.agoda.com/,101,0,0
+1712878227681,153,NBA-1,200,OK,10 Users 1-2,text,true,,195478,116,7,7,https://www.agoda.com/,136,0,0
+1712878227403,535,NBA,200,OK,10 Users 1-4,text,true,,196298,232,8,8,https://www.agoda.com/,128,0,32
+1712878227403,128,NBA-0,301,Moved Permanently,10 Users 1-4,,true,,527,116,8,8,http://www.agoda.com/,128,0,32
+1712878227531,407,NBA-1,200,OK,10 Users 1-4,text,true,,195771,116,8,8,https://www.agoda.com/,299,0,50
+1712878227270,678,NBA,200,OK,10 Users 1-3,text,true,,196377,232,8,8,https://www.agoda.com/,186,0,22
+1712878227270,186,NBA-0,301,Moved Permanently,10 Users 1-3,,true,,527,116,8,8,http://www.agoda.com/,186,0,22
+1712878227456,492,NBA-1,200,OK,10 Users 1-3,text,true,,195850,116,8,8,https://www.agoda.com/,390,0,62
+1712878227535,472,NBA,200,OK,10 Users 1-5,text,true,,196315,232,8,8,https://www.agoda.com/,129,0,21
+1712878227535,129,NBA-0,301,Moved Permanently,10 Users 1-5,,true,,527,116,8,8,http://www.agoda.com/,129,0,21
+1712878227664,343,NBA-1,200,OK,10 Users 1-5,text,true,,195788,116,8,8,https://www.agoda.com/,261,0,48
+1712878227732,290,NBA,200,OK,10 Users 1-1,text,true,,195692,232,8,8,https://www.agoda.com/,115,0,0
+1712878227732,115,NBA-0,301,Moved Permanently,10 Users 1-1,,true,,527,116,8,8,http://www.agoda.com/,115,0,0
+1712878227847,175,NBA-1,200,OK,10 Users 1-1,text,true,,195165,116,8,8,https://www.agoda.com/,157,0,0
+1712878227938,276,NBA,200,OK,10 Users 1-4,text,true,,195794,232,10,10,https://www.agoda.com/,95,0,0
+1712878227938,95,NBA-0,301,Moved Permanently,10 Users 1-4,,true,,527,116,10,10,http://www.agoda.com/,95,0,0
+1712878228033,181,NBA-1,200,OK,10 Users 1-4,text,true,,195267,116,10,10,https://www.agoda.com/,160,0,0
+1712878227672,596,NBA,200,OK,10 Users 1-6,text,true,,196322,232,10,10,https://www.agoda.com/,102,0,17
+1712878227672,102,NBA-0,301,Moved Permanently,10 Users 1-6,,true,,527,116,10,10,http://www.agoda.com/,102,0,17
+1712878227774,494,NBA-1,200,OK,10 Users 1-6,text,true,,195795,116,10,10,https://www.agoda.com/,441,0,88
+1712878227834,504,NBA,200,OK,10 Users 1-2,text,true,,195650,232,11,11,https://www.agoda.com/,123,0,0
+1712878227834,123,NBA-0,301,Moved Permanently,10 Users 1-2,,true,,527,116,11,11,http://www.agoda.com/,123,0,0
+1712878227957,381,NBA-1,200,OK,10 Users 1-2,text,true,,195123,116,11,11,https://www.agoda.com/,368,0,0
+1712878227948,431,NBA,200,OK,10 Users 1-3,text,true,,196426,232,11,11,https://www.agoda.com/,187,0,0
+1712878227948,187,NBA-0,301,Moved Permanently,10 Users 1-3,,true,,527,116,11,11,http://www.agoda.com/,187,0,0
+1712878228135,244,NBA-1,200,OK,10 Users 1-3,text,true,,195899,116,11,11,https://www.agoda.com/,217,0,0
+1712878228022,367,NBA,200,OK,10 Users 1-1,text,true,,195681,232,11,11,https://www.agoda.com/,224,0,0
+1712878228022,224,NBA-0,301,Moved Permanently,10 Users 1-1,,true,,527,116,11,11,http://www.agoda.com/,224,0,0
+1712878228246,143,NBA-1,200,OK,10 Users 1-1,text,true,,195154,116,11,11,https://www.agoda.com/,130,0,0
+1712878228008,382,NBA,200,OK,10 Users 1-5,text,true,,196300,232,11,11,https://www.agoda.com/,222,0,0
+1712878228008,222,NBA-0,301,Moved Permanently,10 Users 1-5,,true,,527,116,11,11,http://www.agoda.com/,222,0,0
+1712878228230,160,NBA-1,200,OK,10 Users 1-5,text,true,,195773,116,11,11,https://www.agoda.com/,133,0,0
+1712878228214,275,NBA,200,OK,10 Users 1-4,text,true,,196408,232,12,12,https://www.agoda.com/,126,0,0
+1712878228214,126,NBA-0,301,Moved Permanently,10 Users 1-4,,true,,527,116,12,12,http://www.agoda.com/,126,0,0
+1712878228340,149,NBA-1,200,OK,10 Users 1-4,text,true,,195881,116,12,12,https://www.agoda.com/,125,0,0
+1712878228268,296,NBA,200,OK,10 Users 1-6,text,true,,195883,232,12,12,https://www.agoda.com/,88,0,0
+1712878228268,88,NBA-0,301,Moved Permanently,10 Users 1-6,,true,,527,116,12,12,http://www.agoda.com/,88,0,0
+1712878228357,207,NBA-1,200,OK,10 Users 1-6,text,true,,195356,116,12,12,https://www.agoda.com/,187,0,0
+1712878228338,227,NBA,200,OK,10 Users 1-2,text,true,,195675,232,12,12,https://www.agoda.com/,92,0,0
+1712878228338,92,NBA-0,301,Moved Permanently,10 Users 1-2,,true,,527,116,12,12,http://www.agoda.com/,92,0,0
+1712878228430,135,NBA-1,200,OK,10 Users 1-2,text,true,,195148,116,12,12,https://www.agoda.com/,126,0,0
+1712878227937,672,NBA,200,OK,10 Users 1-8,text,true,,195791,232,13,13,https://www.agoda.com/,119,0,20
+1712878227937,119,NBA-0,301,Moved Permanently,10 Users 1-8,,true,,546,116,13,13,http://www.agoda.com/,119,0,20
+1712878228057,552,NBA-1,200,OK,10 Users 1-8,text,true,,195245,116,13,13,https://www.agoda.com/,419,0,169
+1712878228068,561,NBA,200,OK,10 Users 1-9,text,true,,195910,232,13,13,https://www.agoda.com/,202,0,109
+1712878228068,202,NBA-0,301,Moved Permanently,10 Users 1-9,,true,,527,116,13,13,http://www.agoda.com/,202,0,109
+1712878228270,359,NBA-1,200,OK,10 Users 1-9,text,true,,195383,116,13,13,https://www.agoda.com/,268,0,66
+1712878228390,275,NBA,200,OK,10 Users 1-1,text,true,,195574,232,13,13,https://www.agoda.com/,92,0,0
+1712878228390,92,NBA-0,301,Moved Permanently,10 Users 1-1,,true,,527,116,13,13,http://www.agoda.com/,92,0,0
+1712878228482,183,NBA-1,200,OK,10 Users 1-1,text,true,,195047,116,13,13,https://www.agoda.com/,173,0,0
+1712878228390,276,NBA,200,OK,10 Users 1-5,text,true,,196437,232,13,13,https://www.agoda.com/,93,0,0
+1712878228390,93,NBA-0,301,Moved Permanently,10 Users 1-5,,true,,527,116,13,13,http://www.agoda.com/,93,0,0
+1712878228483,183,NBA-1,200,OK,10 Users 1-5,text,true,,195910,116,13,13,https://www.agoda.com/,132,0,0
+1712878228379,289,NBA,200,OK,10 Users 1-3,text,true,,196126,232,13,13,https://www.agoda.com/,101,0,0
+1712878228379,101,NBA-0,301,Moved Permanently,10 Users 1-3,,true,,527,116,13,13,http://www.agoda.com/,101,0,0
+1712878228480,188,NBA-1,200,OK,10 Users 1-3,text,true,,195599,116,13,13,https://www.agoda.com/,142,0,0
+1712878227802,907,NBA,200,OK,10 Users 1-7,text,true,,196304,232,13,13,https://www.agoda.com/,234,0,59
+1712878227802,234,NBA-0,301,Moved Permanently,10 Users 1-7,,true,,528,116,13,13,http://www.agoda.com/,234,0,59
+1712878228036,673,NBA-1,200,OK,10 Users 1-7,text,true,,195776,116,13,13,https://www.agoda.com/,548,0,176
+1712878228489,322,NBA,200,OK,10 Users 1-4,text,true,,195571,232,14,14,https://www.agoda.com/,125,0,0
+1712878228489,125,NBA-0,301,Moved Permanently,10 Users 1-4,,true,,527,116,14,14,http://www.agoda.com/,125,0,0
+1712878228614,197,NBA-1,200,OK,10 Users 1-4,text,true,,195044,116,14,14,https://www.agoda.com/,184,0,0
+1712878228566,259,NBA,200,OK,10 Users 1-2,text,true,,195680,232,14,14,https://www.agoda.com/,114,0,0
+1712878228566,114,NBA-0,301,Moved Permanently,10 Users 1-2,,true,,527,116,14,14,http://www.agoda.com/,114,0,0
+1712878228681,144,NBA-1,200,OK,10 Users 1-2,text,true,,195153,116,14,14,https://www.agoda.com/,131,0,0
+1712878228564,283,NBA,200,OK,10 Users 1-6,text,true,,195501,232,14,14,https://www.agoda.com/,116,0,0
+1712878228564,116,NBA-0,301,Moved Permanently,10 Users 1-6,,true,,527,116,14,14,http://www.agoda.com/,116,0,0
+1712878228680,167,NBA-1,200,OK,10 Users 1-6,text,true,,194974,116,14,14,https://www.agoda.com/,143,0,0
+1712878228665,216,NBA,200,OK,10 Users 1-1,text,true,,195812,232,15,15,https://www.agoda.com/,83,0,0
+1712878228665,83,NBA-0,301,Moved Permanently,10 Users 1-1,,true,,527,116,15,15,http://www.agoda.com/,83,0,0
+1712878228748,133,NBA-1,200,OK,10 Users 1-1,text,true,,195285,116,15,15,https://www.agoda.com/,122,0,0
+1712878228609,275,NBA,200,OK,10 Users 1-8,text,true,,195818,232,15,15,https://www.agoda.com/,112,0,0
+1712878228609,112,NBA-0,301,Moved Permanently,10 Users 1-8,,true,,527,116,15,15,http://www.agoda.com/,112,0,0
+1712878228721,163,NBA-1,200,OK,10 Users 1-8,text,true,,195291,116,15,15,https://www.agoda.com/,130,0,0
+1712878228204,709,NBA,200,OK,10 Users 1-10,text,true,,195835,232,15,15,https://www.agoda.com/,184,0,27
+1712878228204,184,NBA-0,301,Moved Permanently,10 Users 1-10,,true,,527,116,15,15,http://www.agoda.com/,184,0,27
+1712878228389,524,NBA-1,200,OK,10 Users 1-10,text,true,,195308,116,15,15,https://www.agoda.com/,438,0,53
+1712878228333,596,NBA,200,OK,10 Users 1-11,text,true,,196506,232,15,15,https://www.agoda.com/,110,0,19
+1712878228333,110,NBA-0,301,Moved Permanently,10 Users 1-11,,true,,527,116,15,15,http://www.agoda.com/,110,0,19
+1712878228443,486,NBA-1,200,OK,10 Users 1-11,text,true,,195979,116,15,15,https://www.agoda.com/,336,0,79
+1712878228666,327,NBA,200,OK,10 Users 1-5,text,true,,195808,232,15,15,https://www.agoda.com/,165,0,0
+1712878228666,165,NBA-0,301,Moved Permanently,10 Users 1-5,,true,,527,116,15,15,http://www.agoda.com/,165,0,0
+1712878228831,162,NBA-1,200,OK,10 Users 1-5,text,true,,195281,116,15,15,https://www.agoda.com/,135,0,0
+1712878228825,262,NBA,200,OK,10 Users 1-2,text,true,,196501,232,15,15,https://www.agoda.com/,103,0,0
+1712878228825,103,NBA-0,301,Moved Permanently,10 Users 1-2,,true,,527,116,15,15,http://www.agoda.com/,103,0,0
+1712878228928,159,NBA-1,200,OK,10 Users 1-2,text,true,,195974,116,15,15,https://www.agoda.com/,151,0,0
+1712878228668,433,NBA,200,OK,10 Users 1-3,text,true,,195791,232,15,15,https://www.agoda.com/,201,0,0
+1712878228668,201,NBA-0,301,Moved Permanently,10 Users 1-3,,true,,527,116,15,15,http://www.agoda.com/,201,0,0
+1712878228869,232,NBA-1,200,OK,10 Users 1-3,text,true,,195264,116,15,15,https://www.agoda.com/,134,0,0
+1712878228848,269,NBA,200,OK,10 Users 1-6,text,true,,196357,232,15,15,https://www.agoda.com/,112,0,0
+1712878228811,306,NBA,200,OK,10 Users 1-4,text,true,,195719,232,15,15,https://www.agoda.com/,119,0,0
+1712878228811,119,NBA-0,301,Moved Permanently,10 Users 1-4,,true,,527,116,15,15,http://www.agoda.com/,119,0,0
+1712878228929,188,NBA-1,200,OK,10 Users 1-4,text,true,,195192,116,15,15,https://www.agoda.com/,169,0,0
+1712878228848,112,NBA-0,301,Moved Permanently,10 Users 1-6,,true,,527,116,15,15,http://www.agoda.com/,112,0,0
+1712878228959,158,NBA-1,200,OK,10 Users 1-6,text,true,,195830,116,15,15,https://www.agoda.com/,143,0,0
+1712878228881,236,NBA,200,OK,10 Users 1-1,text,true,,196335,232,15,15,https://www.agoda.com/,78,0,0
+1712878228881,78,NBA-0,301,Moved Permanently,10 Users 1-1,,true,,527,116,15,15,http://www.agoda.com/,78,0,0
+1712878228958,159,NBA-1,200,OK,10 Users 1-1,text,true,,195808,116,15,15,https://www.agoda.com/,139,0,0
+1712878228885,236,NBA,200,OK,10 Users 1-8,text,true,,195670,232,15,15,https://www.agoda.com/,90,0,0
+1712878228885,90,NBA-0,301,Moved Permanently,10 Users 1-8,,true,,527,116,15,15,http://www.agoda.com/,90,0,0
+1712878228974,147,NBA-1,200,OK,10 Users 1-8,text,true,,195143,116,15,15,https://www.agoda.com/,128,0,0
+1712878228466,700,NBA,200,OK,10 Users 1-12,text,true,,195855,232,15,15,https://www.agoda.com/,150,0,39
+1712878228466,150,NBA-0,301,Moved Permanently,10 Users 1-12,,true,,527,116,15,15,http://www.agoda.com/,150,0,39
+1712878228617,549,NBA-1,200,OK,10 Users 1-12,text,true,,195328,116,15,15,https://www.agoda.com/,311,0,49
+1712878228709,470,NBA,200,OK,10 Users 1-7,text,true,,196248,232,15,15,https://www.agoda.com/,161,0,0
+1712878228709,161,NBA-0,301,Moved Permanently,10 Users 1-7,,true,,527,116,15,15,http://www.agoda.com/,161,0,0
+1712878228870,309,NBA-1,200,OK,10 Users 1-7,text,true,,195721,116,15,15,https://www.agoda.com/,289,0,0
+1712878228601,597,NBA,200,OK,10 Users 1-13,text,true,,196122,232,15,15,https://www.agoda.com/,115,0,21
+1712878228601,115,NBA-0,301,Moved Permanently,10 Users 1-13,,true,,527,116,15,15,http://www.agoda.com/,115,0,21
+1712878228717,481,NBA-1,200,OK,10 Users 1-13,text,true,,195595,116,15,15,https://www.agoda.com/,415,0,68
+1712878228630,574,NBA,200,OK,10 Users 1-9,text,true,,196308,232,15,15,https://www.agoda.com/,104,0,0
+1712878228630,104,NBA-0,301,Moved Permanently,10 Users 1-9,,true,,527,116,15,15,http://www.agoda.com/,104,0,0
+1712878228734,470,NBA-1,200,OK,10 Users 1-9,text,true,,195781,116,15,15,https://www.agoda.com/,360,0,0
+1712878228914,300,NBA,200,OK,10 Users 1-10,text,true,,196405,232,15,15,https://www.agoda.com/,125,0,0
+1712878228914,125,NBA-0,301,Moved Permanently,10 Users 1-10,,true,,527,116,15,15,http://www.agoda.com/,125,0,0
+1712878229038,176,NBA-1,200,OK,10 Users 1-10,text,true,,195878,116,15,15,https://www.agoda.com/,155,0,0
+1712878228992,350,NBA,200,OK,10 Users 1-5,text,true,,196448,232,15,15,https://www.agoda.com/,110,0,0
+1712878228992,110,NBA-0,301,Moved Permanently,10 Users 1-5,,true,,546,116,15,15,http://www.agoda.com/,110,0,0
+1712878229102,240,NBA-1,200,OK,10 Users 1-5,text,true,,195902,116,15,15,https://www.agoda.com/,206,0,0
+1712878228732,617,NBA,200,OK,10 Users 1-14,text,true,,196379,232,15,15,https://www.agoda.com/,145,0,23
+1712878228732,145,NBA-0,301,Moved Permanently,10 Users 1-14,,true,,527,116,15,15,http://www.agoda.com/,145,0,23
+1712878228877,472,NBA-1,200,OK,10 Users 1-14,text,true,,195852,116,15,15,https://www.agoda.com/,377,0,95
+1712878229117,237,NBA,200,OK,10 Users 1-4,text,true,,196290,232,15,15,https://www.agoda.com/,85,0,0
+1712878229117,85,NBA-0,301,Moved Permanently,10 Users 1-4,,true,,527,116,15,15,http://www.agoda.com/,85,0,0
+1712878229202,152,NBA-1,200,OK,10 Users 1-4,text,true,,195763,116,15,15,https://www.agoda.com/,141,0,0
+1712878229087,278,NBA,200,OK,10 Users 1-2,text,true,,195980,232,15,15,https://www.agoda.com/,132,0,0
+1712878229087,132,NBA-0,301,Moved Permanently,10 Users 1-2,,true,,527,116,15,15,http://www.agoda.com/,132,0,0
+1712878229219,146,NBA-1,200,OK,10 Users 1-2,text,true,,195453,116,15,15,https://www.agoda.com/,134,0,0
+1712878229121,277,NBA,200,OK,10 Users 1-8,text,true,,196343,232,15,15,https://www.agoda.com/,137,0,0
+1712878229121,137,NBA-0,301,Moved Permanently,10 Users 1-8,,true,,527,116,15,15,http://www.agoda.com/,137,0,0
+1712878229258,140,NBA-1,200,OK,10 Users 1-8,text,true,,195816,116,15,15,https://www.agoda.com/,127,0,0
+1712878229117,288,NBA,200,OK,10 Users 1-6,text,true,,196149,232,15,15,https://www.agoda.com/,142,0,0
+1712878229117,142,NBA-0,301,Moved Permanently,10 Users 1-6,,true,,527,116,15,15,http://www.agoda.com/,142,0,0
+1712878229259,146,NBA-1,200,OK,10 Users 1-6,text,true,,195622,116,15,15,https://www.agoda.com/,136,0,0
+1712878229100,319,NBA,200,OK,10 Users 1-3,text,true,,195914,232,15,15,https://www.agoda.com/,137,0,0
+1712878229100,137,NBA-0,301,Moved Permanently,10 Users 1-3,,true,,527,116,15,15,http://www.agoda.com/,137,0,0
+1712878229237,182,NBA-1,200,OK,10 Users 1-3,text,true,,195387,116,15,15,https://www.agoda.com/,165,0,0
+1712878229178,252,NBA,200,OK,10 Users 1-7,text,true,,196390,232,15,15,https://www.agoda.com/,107,0,0
+1712878229178,107,NBA-0,301,Moved Permanently,10 Users 1-7,,true,,527,116,15,15,http://www.agoda.com/,107,0,0
+1712878229286,144,NBA-1,200,OK,10 Users 1-7,text,true,,195863,116,15,15,https://www.agoda.com/,127,0,0
+1712878228865,581,NBA,200,OK,10 Users 1-15,text,true,,196331,232,15,15,https://www.agoda.com/,123,0,31
+1712878228865,123,NBA-0,301,Moved Permanently,10 Users 1-15,,true,,527,116,15,15,http://www.agoda.com/,123,0,31
+1712878228988,458,NBA-1,200,OK,10 Users 1-15,text,true,,195804,116,15,15,https://www.agoda.com/,399,0,113
+1712878229197,257,NBA,200,OK,10 Users 1-13,text,true,,195769,232,15,15,https://www.agoda.com/,105,0,0
+1712878229197,105,NBA-0,301,Moved Permanently,10 Users 1-13,,true,,527,116,15,15,http://www.agoda.com/,105,0,0
+1712878229302,152,NBA-1,200,OK,10 Users 1-13,text,true,,195242,116,15,15,https://www.agoda.com/,122,0,0
+1712878229117,341,NBA,200,OK,10 Users 1-1,text,true,,196161,232,15,15,https://www.agoda.com/,84,0,0
+1712878229117,84,NBA-0,301,Moved Permanently,10 Users 1-1,,true,,527,116,15,15,http://www.agoda.com/,84,0,0
+1712878229201,257,NBA-1,200,OK,10 Users 1-1,text,true,,195634,116,15,15,https://www.agoda.com/,191,0,0
+1712878229214,267,NBA,200,OK,10 Users 1-10,text,true,,195687,232,15,15,https://www.agoda.com/,103,0,0
+1712878229214,103,NBA-0,301,Moved Permanently,10 Users 1-10,,true,,527,116,15,15,http://www.agoda.com/,103,0,0
+1712878229317,164,NBA-1,200,OK,10 Users 1-10,text,true,,195160,116,15,15,https://www.agoda.com/,144,0,0
+1712878229342,240,NBA,200,OK,10 Users 1-5,text,true,,195609,232,15,15,https://www.agoda.com/,90,0,0
+1712878229342,90,NBA-0,301,Moved Permanently,10 Users 1-5,,true,,527,116,15,15,http://www.agoda.com/,90,0,0
+1712878229432,150,NBA-1,200,OK,10 Users 1-5,text,true,,195082,116,15,15,https://www.agoda.com/,138,0,0
+1712878229349,252,NBA,200,OK,10 Users 1-14,text,true,,196142,232,15,15,https://www.agoda.com/,95,0,0
+1712878229349,95,NBA-0,301,Moved Permanently,10 Users 1-14,,true,,527,116,15,15,http://www.agoda.com/,95,0,0
+1712878229444,157,NBA-1,200,OK,10 Users 1-14,text,true,,195615,116,15,15,https://www.agoda.com/,135,0,0
+1712878229365,236,NBA,200,OK,10 Users 1-2,text,true,,195978,232,15,15,https://www.agoda.com/,90,0,0
+1712878229365,90,NBA-0,301,Moved Permanently,10 Users 1-2,,true,,527,116,15,15,http://www.agoda.com/,90,0,0
+1712878229455,146,NBA-1,200,OK,10 Users 1-2,text,true,,195451,116,15,15,https://www.agoda.com/,130,0,0
+1712878229398,227,NBA,200,OK,10 Users 1-8,text,true,,196326,232,15,15,https://www.agoda.com/,86,0,0
+1712878229398,86,NBA-0,301,Moved Permanently,10 Users 1-8,,true,,527,116,15,15,http://www.agoda.com/,86,0,0
+1712878229484,141,NBA-1,200,OK,10 Users 1-8,text,true,,195799,116,15,15,https://www.agoda.com/,131,0,0
+1712878229420,232,NBA,200,OK,10 Users 1-3,text,true,,195799,232,15,15,https://www.agoda.com/,93,0,0
+1712878229420,93,NBA-0,301,Moved Permanently,10 Users 1-3,,true,,527,116,15,15,http://www.agoda.com/,93,0,0
+1712878229513,139,NBA-1,200,OK,10 Users 1-3,text,true,,195272,116,15,15,https://www.agoda.com/,129,0,0
+1712878229405,259,NBA,200,OK,10 Users 1-6,text,true,,196280,232,15,15,https://www.agoda.com/,107,0,0
+1712878229405,107,NBA-0,301,Moved Permanently,10 Users 1-6,,true,,527,116,15,15,http://www.agoda.com/,107,0,0
+1712878229512,152,NBA-1,200,OK,10 Users 1-6,text,true,,195753,116,15,15,https://www.agoda.com/,121,0,0
+1712878229446,231,NBA,200,OK,10 Users 1-15,text,true,,195849,232,15,15,https://www.agoda.com/,86,0,0
+1712878229446,86,NBA-0,301,Moved Permanently,10 Users 1-15,,true,,527,116,15,15,http://www.agoda.com/,86,0,0
+1712878229532,145,NBA-1,200,OK,10 Users 1-15,text,true,,195322,116,15,15,https://www.agoda.com/,123,0,0
+1712878229354,325,NBA,200,OK,10 Users 1-4,text,true,,195698,232,15,15,https://www.agoda.com/,84,0,0
+1712878229354,84,NBA-0,301,Moved Permanently,10 Users 1-4,,true,,527,116,15,15,http://www.agoda.com/,84,0,0
+1712878229438,241,NBA-1,200,OK,10 Users 1-4,text,true,,195171,116,15,15,https://www.agoda.com/,230,0,0
+1712878229455,260,NBA,200,OK,10 Users 1-13,text,true,,196239,232,15,15,https://www.agoda.com/,96,0,0
+1712878229455,96,NBA-0,301,Moved Permanently,10 Users 1-13,,true,,527,116,15,15,http://www.agoda.com/,96,0,0
+1712878229551,164,NBA-1,200,OK,10 Users 1-13,text,true,,195712,116,15,15,https://www.agoda.com/,128,0,0
+1712878229481,249,NBA,200,OK,10 Users 1-10,text,true,,195809,232,15,15,https://www.agoda.com/,83,0,0
+1712878229481,83,NBA-0,301,Moved Permanently,10 Users 1-10,,true,,527,116,15,15,http://www.agoda.com/,83,0,0
+1712878229564,166,NBA-1,200,OK,10 Users 1-10,text,true,,195282,116,15,15,https://www.agoda.com/,154,0,0
+1712878229431,330,NBA,200,OK,10 Users 1-7,text,true,,196360,232,15,15,https://www.agoda.com/,140,0,0
+1712878229431,140,NBA-0,301,Moved Permanently,10 Users 1-7,,true,,527,116,15,15,http://www.agoda.com/,140,0,0
+1712878229571,190,NBA-1,200,OK,10 Users 1-7,text,true,,195833,116,15,15,https://www.agoda.com/,179,0,0
+1712878229458,324,NBA,200,OK,10 Users 1-1,text,true,,196379,232,15,15,https://www.agoda.com/,98,0,0
+1712878229458,98,NBA-0,301,Moved Permanently,10 Users 1-1,,true,,527,116,15,15,http://www.agoda.com/,98,0,0
+1712878229556,226,NBA-1,200,OK,10 Users 1-1,text,true,,195852,116,15,15,https://www.agoda.com/,135,0,0
+1712878229601,255,NBA,200,OK,10 Users 1-2,text,true,,196239,232,15,15,https://www.agoda.com/,94,0,0
+1712878229601,94,NBA-0,301,Moved Permanently,10 Users 1-2,,true,,527,116,15,15,http://www.agoda.com/,94,0,0
+1712878229695,161,NBA-1,200,OK,10 Users 1-2,text,true,,195712,116,15,15,https://www.agoda.com/,150,0,0
+1712878229601,257,NBA,200,OK,10 Users 1-14,text,true,,195593,232,15,15,https://www.agoda.com/,94,0,0
+1712878229601,94,NBA-0,301,Moved Permanently,10 Users 1-14,,true,,527,116,15,15,http://www.agoda.com/,94,0,0
+1712878229695,163,NBA-1,200,OK,10 Users 1-14,text,true,,195066,116,15,15,https://www.agoda.com/,153,0,0
+1712878229625,242,NBA,200,OK,10 Users 1-8,text,true,,196097,232,15,15,https://www.agoda.com/,104,0,0
+1712878229625,104,NBA-0,301,Moved Permanently,10 Users 1-8,,true,,527,116,15,15,http://www.agoda.com/,104,0,0
+1712878229729,138,NBA-1,200,OK,10 Users 1-8,text,true,,195570,116,15,15,https://www.agoda.com/,128,0,0
+1712878229583,304,NBA,200,OK,10 Users 1-5,text,true,,196274,232,15,15,https://www.agoda.com/,99,0,0
+1712878229583,99,NBA-0,301,Moved Permanently,10 Users 1-5,,true,,527,116,15,15,http://www.agoda.com/,99,0,0
+1712878229682,205,NBA-1,200,OK,10 Users 1-5,text,true,,195747,116,15,15,https://www.agoda.com/,159,0,0
+1712878229653,249,NBA,200,OK,10 Users 1-3,text,true,,196041,232,15,15,https://www.agoda.com/,98,0,0
+1712878229653,98,NBA-0,301,Moved Permanently,10 Users 1-3,,true,,527,116,15,15,http://www.agoda.com/,98,0,0
+1712878229751,151,NBA-1,200,OK,10 Users 1-3,text,true,,195514,116,15,15,https://www.agoda.com/,138,0,0
+1712878229677,227,NBA,200,OK,10 Users 1-15,text,true,,196116,232,15,15,https://www.agoda.com/,87,0,0
+1712878229677,87,NBA-0,301,Moved Permanently,10 Users 1-15,,true,,527,116,15,15,http://www.agoda.com/,87,0,0
+1712878229764,140,NBA-1,200,OK,10 Users 1-15,text,true,,195589,116,15,15,https://www.agoda.com/,129,0,0
+1712878228929,996,NBA,200,OK,10 Users 1-11,text,true,,196397,232,15,15,https://www.agoda.com/,200,0,0
+1712878228929,200,NBA-0,301,Moved Permanently,10 Users 1-11,,true,,527,116,15,15,http://www.agoda.com/,200,0,0
+1712878229129,796,NBA-1,200,OK,10 Users 1-11,text,true,,195870,116,15,15,https://www.agoda.com/,634,0,0
+1712878229165,763,NBA,200,OK,10 Users 1-12,text,true,,196514,232,15,15,https://www.agoda.com/,95,0,0
+1712878229165,95,NBA-0,301,Moved Permanently,10 Users 1-12,,true,,527,116,15,15,http://www.agoda.com/,95,0,0
+1712878229260,668,NBA-1,200,OK,10 Users 1-12,text,true,,195987,116,15,15,https://www.agoda.com/,640,0,0
+1712878229203,729,NBA,200,OK,10 Users 1-9,text,true,,196128,232,15,15,https://www.agoda.com/,96,0,0
+1712878229203,96,NBA-0,301,Moved Permanently,10 Users 1-9,,true,,528,116,15,15,http://www.agoda.com/,96,0,0
+1712878229299,633,NBA-1,200,OK,10 Users 1-9,text,true,,195600,116,15,15,https://www.agoda.com/,612,0,0
+1712878229664,290,NBA,200,OK,10 Users 1-6,text,true,,196475,232,15,15,https://www.agoda.com/,88,0,0
+1712878229664,88,NBA-0,301,Moved Permanently,10 Users 1-6,,true,,527,116,15,15,http://www.agoda.com/,88,0,0
+1712878229752,202,NBA-1,200,OK,10 Users 1-6,text,true,,195948,116,15,15,https://www.agoda.com/,191,0,0
+1712878229730,225,NBA,200,OK,10 Users 1-10,text,true,,196431,232,15,15,https://www.agoda.com/,88,0,0
+1712878229730,88,NBA-0,301,Moved Permanently,10 Users 1-10,,true,,527,116,15,15,http://www.agoda.com/,88,0,0
+1712878229818,137,NBA-1,200,OK,10 Users 1-10,text,true,,195904,116,15,15,https://www.agoda.com/,128,0,0
+1712878229679,291,NBA,200,OK,10 Users 1-4,text,true,,195623,232,15,15,https://www.agoda.com/,138,0,0
+1712878229679,138,NBA-0,301,Moved Permanently,10 Users 1-4,,true,,527,116,15,15,http://www.agoda.com/,138,0,0
+1712878229817,153,NBA-1,200,OK,10 Users 1-4,text,true,,195096,116,15,15,https://www.agoda.com/,144,0,0
+1712878229715,256,NBA,200,OK,10 Users 1-13,text,true,,195917,232,15,15,https://www.agoda.com/,95,0,0
+1712878229715,95,NBA-0,301,Moved Permanently,10 Users 1-13,,true,,527,116,15,15,http://www.agoda.com/,95,0,0
+1712878229810,161,NBA-1,200,OK,10 Users 1-13,text,true,,195390,116,15,15,https://www.agoda.com/,149,0,0
+1712878229782,227,NBA,200,OK,10 Users 1-1,text,true,,195733,232,15,15,https://www.agoda.com/,83,0,0
+1712878229782,83,NBA-0,301,Moved Permanently,10 Users 1-1,,true,,527,116,15,15,http://www.agoda.com/,83,0,0
+1712878229865,144,NBA-1,200,OK,10 Users 1-1,text,true,,195206,116,15,15,https://www.agoda.com/,130,0,0
+1712878229761,289,NBA,200,OK,10 Users 1-7,text,true,,196236,232,14,14,https://www.agoda.com/,115,0,0
+1712878229761,115,NBA-0,301,Moved Permanently,10 Users 1-7,,true,,527,116,14,14,http://www.agoda.com/,115,0,0
+1712878229876,174,NBA-1,200,OK,10 Users 1-7,text,true,,195709,116,14,14,https://www.agoda.com/,160,0,0
+1712878229857,226,NBA,200,OK,10 Users 1-2,text,true,,195806,232,13,13,https://www.agoda.com/,85,0,0
+1712878229857,85,NBA-0,301,Moved Permanently,10 Users 1-2,,true,,527,116,13,13,http://www.agoda.com/,85,0,0
+1712878229943,140,NBA-1,200,OK,10 Users 1-2,text,true,,195279,116,13,13,https://www.agoda.com/,126,0,0
+1712878229867,219,NBA,200,OK,10 Users 1-8,text,true,,195801,232,12,12,https://www.agoda.com/,81,0,0
+1712878229867,81,NBA-0,301,Moved Permanently,10 Users 1-8,,true,,527,116,12,12,http://www.agoda.com/,81,0,0
+1712878229948,138,NBA-1,200,OK,10 Users 1-8,text,true,,195274,116,12,12,https://www.agoda.com/,126,0,0
+1712878229858,267,NBA,200,OK,10 Users 1-14,text,true,,195764,232,11,11,https://www.agoda.com/,108,0,0
+1712878229858,108,NBA-0,301,Moved Permanently,10 Users 1-14,,true,,527,116,11,11,http://www.agoda.com/,108,0,0
+1712878229966,159,NBA-1,200,OK,10 Users 1-14,text,true,,195237,116,11,11,https://www.agoda.com/,149,0,0
+1712878229887,262,NBA,200,OK,10 Users 1-5,text,true,,195595,232,10,10,https://www.agoda.com/,110,0,0
+1712878229887,110,NBA-0,301,Moved Permanently,10 Users 1-5,,true,,527,116,10,10,http://www.agoda.com/,110,0,0
+1712878229997,152,NBA-1,200,OK,10 Users 1-5,text,true,,195068,116,10,10,https://www.agoda.com/,139,0,0
+1712878229905,282,NBA,200,OK,10 Users 1-15,text,true,,196279,232,9,9,https://www.agoda.com/,103,0,0
+1712878229905,103,NBA-0,301,Moved Permanently,10 Users 1-15,,true,,527,116,9,9,http://www.agoda.com/,103,0,0
+1712878230008,179,NBA-1,200,OK,10 Users 1-15,text,true,,195752,116,9,9,https://www.agoda.com/,169,0,0
+1712878229971,227,NBA,200,OK,10 Users 1-4,text,true,,195514,232,8,8,https://www.agoda.com/,84,0,0
+1712878229971,84,NBA-0,301,Moved Permanently,10 Users 1-4,,true,,527,116,8,8,http://www.agoda.com/,84,0,0
+1712878230055,143,NBA-1,200,OK,10 Users 1-4,text,true,,194987,116,8,8,https://www.agoda.com/,132,0,0
+1712878229903,298,NBA,200,OK,10 Users 1-3,text,true,,196394,232,7,7,https://www.agoda.com/,105,0,0
+1712878229903,105,NBA-0,301,Moved Permanently,10 Users 1-3,,true,,527,116,7,7,http://www.agoda.com/,105,0,0
+1712878230008,193,NBA-1,200,OK,10 Users 1-3,text,true,,195867,116,7,7,https://www.agoda.com/,175,0,0
+1712878229955,248,NBA,200,OK,10 Users 1-10,text,true,,195871,232,6,6,https://www.agoda.com/,108,0,0
+1712878229955,108,NBA-0,301,Moved Permanently,10 Users 1-10,,true,,527,116,6,6,http://www.agoda.com/,108,0,0
+1712878230063,140,NBA-1,200,OK,10 Users 1-10,text,true,,195344,116,6,6,https://www.agoda.com/,131,0,0
+1712878229932,297,NBA,200,OK,10 Users 1-9,text,true,,196168,232,5,5,https://www.agoda.com/,93,0,0
+1712878229932,93,NBA-0,301,Moved Permanently,10 Users 1-9,,true,,527,116,5,5,http://www.agoda.com/,93,0,0
+1712878230025,204,NBA-1,200,OK,10 Users 1-9,text,true,,195641,116,5,5,https://www.agoda.com/,193,0,0
+1712878229928,310,NBA,200,OK,10 Users 1-12,text,true,,196302,232,4,4,https://www.agoda.com/,82,0,0
+1712878229928,82,NBA-0,301,Moved Permanently,10 Users 1-12,,true,,527,116,4,4,http://www.agoda.com/,82,0,0
+1712878230010,228,NBA-1,200,OK,10 Users 1-12,text,true,,195775,116,4,4,https://www.agoda.com/,198,0,0
+1712878229925,315,NBA,200,OK,10 Users 1-11,text,true,,195844,232,3,3,https://www.agoda.com/,94,0,0
+1712878229925,94,NBA-0,301,Moved Permanently,10 Users 1-11,,true,,527,116,3,3,http://www.agoda.com/,94,0,0
+1712878230019,221,NBA-1,200,OK,10 Users 1-11,text,true,,195317,116,3,3,https://www.agoda.com/,194,0,0
+1712878229971,292,NBA,200,OK,10 Users 1-13,text,true,,195784,232,2,2,https://www.agoda.com/,113,0,0
+1712878229971,113,NBA-0,301,Moved Permanently,10 Users 1-13,,true,,527,116,2,2,http://www.agoda.com/,113,0,0
+1712878230084,179,NBA-1,200,OK,10 Users 1-13,text,true,,195257,116,2,2,https://www.agoda.com/,168,0,0
+1712878229954,363,NBA,200,OK,10 Users 1-6,text,true,,196201,232,1,1,https://www.agoda.com/,127,0,0
+1712878229954,127,NBA-0,301,Moved Permanently,10 Users 1-6,,true,,527,116,1,1,http://www.agoda.com/,127,0,0
+1712878230081,236,NBA-1,200,OK,10 Users 1-6,text,true,,195674,116,1,1,https://www.agoda.com/,177,0,0

@@ -96,33 +96,33 @@
                 return response;
             }
             fetchData().then(result => {
-                console.log(result.json());
+                result.json().then(value => {
+                    console.log(value);
+                    console.log(value.responseTime);
+                    const formData2 = {
+                        userid: 100,
+                        datetime: value.date,
+                        url: document.getElementById('url').value,
+                        users: document.getElementById('users').value,
+                        rampup: document.getElementById('ramp').value,
+                        duration: document.getElementById('duration').value,
+                        serverlocation: document.getElementById('server').value,
+                        averageresponsetime: value.responseTime,
+                        successrate: value.successRate,
+                        htmlreportlink: value.htmlreportlink
+                    };
+
+                    // Send POST request
+                    fetch('/testing/userinputs', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(formData2)
+                    });
+
+                })
             })
-
-            /**
-            // Gather form data
-            const formData2 = {
-                userid: 100,
-                datetime: '12329823',
-                url: document.getElementById('url').value,
-                users: document.getElementById('users').value,
-                rampup: document.getElementById('ramp').value,
-                duration: document.getElementById('duration').value,
-                serverlocation: document.getElementById('server').value,
-                averageresponsetime: 100,
-                successrate: 2,
-                htmlreportlink: "reportlink"
-            };
-
-            // Send POST request
-            fetch('/testing/userinputs', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(formData2)
-            });
-            */
         });
 
     </script>
