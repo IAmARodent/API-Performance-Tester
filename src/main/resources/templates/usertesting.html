@@ -32,32 +32,29 @@
                         <form id="userTestingInput">
                             <div class="mb-3">
                                 <label for="inputURL" class="form-label">API Endpoint (URL)</label>
-                                <input type="text" class="form-control" id="url"
-                                    placeholder="ie. 'www.google.com'">
+                                <input type="text" class="form-control" id="url" placeholder="ie. 'www.google.com'">
                             </div>
                             <div class="mb-3">
                                 <label for="inputUsers" class="form-label">Amount of Users</label>
-                                <input type="text" class="form-control" id="users"
+                                <input type="number" class="form-control" id="users"
                                     placeholder="(1-500) our servers are limited">
                             </div>
                             <div class="mb-3">
                                 <label for="inputRamp" class="form-label">Ramp-up Time</label>
-                                <input type="text" class="form-control" id="ramp"
-                                    placeholder="(time in seconds)">
+                                <input type="number" class="form-control" id="ramp" placeholder="(time in seconds)">
                             </div>
                             <div class="mb-3">
                                 <label for="inputDuration" class="form-label">Duration</label>
-                                <input type="text" class="form-control" id="duration"
-                                    placeholder="(time in seconds)">
+                                <input type="number" class="form-control" id="duration" placeholder="(time in seconds)">
                             </div>
                             <div class="dropdown">
                                 <label for="confirmPassword" class="form-label">Server Location</label>
                                 <br>
                                 <select class="form-select" aria-label="Default select example" id="server">
                                     <option selected>Choose a Geographic Location to Run Your Test</option>
-                                    <option value="1">Americas</option>
-                                    <option value="2">Europe</option>
-                                    <option value="3">Asia</option>
+                                    <option value="Americas">Americas</option>
+                                    <option value="Europe">Europe</option>
+                                    <option value="Asia">Asia</option>
                                 </select>
                             </div>
                             <br>
@@ -81,17 +78,51 @@
         document.getElementById('userTestingInput').addEventListener('submit', function (event) {
             event.preventDefault(); // Prevent default form submission
 
-            // Gather form data
-            const formData = {
+            const formData1 = {
                 url: document.getElementById('url').value,
                 users: document.getElementById('users').value,
-                ramp: document.getElementById('ramp').value,
+                rampup: document.getElementById('ramp').value,
                 duration: document.getElementById('duration').value,
-                server: document.getElementById('server').value
+                serverlocation: document.getElementById('server').value,
             };
+            async function fetchData() {
+                const response = await fetch('/test', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData1)
+                });
+                return response;
+            }
+            fetchData().then(result => {
+                result.json().then(value => {
+                    console.log(value);
+                    console.log(value.responseTime);
+                    const formData2 = {
+                        userid: 100,
+                        datetime: value.date,
+                        url: document.getElementById('url').value,
+                        users: document.getElementById('users').value,
+                        rampup: document.getElementById('ramp').value,
+                        duration: document.getElementById('duration').value,
+                        serverlocation: document.getElementById('server').value,
+                        averageresponsetime: value.responseTime,
+                        successrate: value.successRate,
+                        htmlreportlink: value.htmlreportlink
+                    };
 
-            // Send POST request
-            fetch('/testing/userinputs', {});
+                    // Send POST request
+                    fetch('/testing/userinputs', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(formData2)
+                    });
+
+                })
+            })
         });
 
     </script>

@@ -1,10 +1,15 @@
 package com.example.demo;
 
+import java.util.ArrayList;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestBody;
+import com.example.demo.Model.TestInputs;
+import com.example.demo.Model.TestResults;
 
 @SpringBootApplication
 @RestController
@@ -14,11 +19,17 @@ public class DemoApplication {
 	{
 		SpringApplication.run(DemoApplication.class, args);
 	}
-	@GetMapping("/test")
-	public String test()
+	@PostMapping("/test")
+	public TestResults test(@RequestBody TestInputs hi)
 	{
+		int users = hi.getUsers();
+		int rampup = hi.getRampup();
+		int duration = hi.getDuration(); 
+		String url = hi.getUrl();
 		JMeter jmeter = new JMeter();
+        Parser.something(users,rampup,duration,url);
 		String temp;
+		TestResults results = null;
 		/**
 		if(server = americas)
 		{
@@ -35,9 +46,11 @@ public class DemoApplication {
 		*/
 		try {
 			temp = jmeter.runTest();
+			results = Parser.something2();
 		} catch (Exception ignore) {
 			temp = "temp";
 		}
-		return temp;
+
+		return results;
 	}
 }

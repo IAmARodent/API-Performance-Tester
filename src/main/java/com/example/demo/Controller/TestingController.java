@@ -1,5 +1,6 @@
 package com.example.demo.Controller;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,18 +14,18 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.example.demo.Model.Test;
 import com.example.demo.Repository.TestRepository;
 
-@RestController
+@Controller
 public class TestingController {
-	@GetMapping("/testing")
-	public String testing(){
-		return "usertesting";
-	}
 	@Autowired
     TestRepository testRepository;
 
 	@PostMapping("/testing/userinputs")
     public void addUser(@RequestBody Test test) {
-        testRepository.save(test);
+		testRepository.save(test);
     }
 
+	@GetMapping("/testing")
+	public String testing(){
+		return "usertesting";
+	}
 }
