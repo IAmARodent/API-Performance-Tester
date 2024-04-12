@@ -1,105 +1,176 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-100" data-bs-theme="auto">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Sign up Page</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            background-color: #f8f9fa;
-        }
+    <!-- Sweet Alerts -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
-        .login-container {
-            margin-top: 100px;
-        }
-    </style>
 </head>
 
-<body class="d-flex h-100 text-center text-bg-light">
+<body class="d-flex h-100 text-bg-light">
     <div class="cover-container d-flex w-100 h-100 p-3 flex-column">
         <!-- Navbar -->
         <div th:replace="navbar :: header"></div>
-        <div class="row justify-content-center login-container">
-            <div class="col-md-6">
-                <div class="card">
+
+        <div class="d-flex w-100 h-100 p-2">
+            <!-- Content -->
+            <div class="d-flex w-100 h-100 justify-content-center">
+                <div class="card align-self-center" style="width: 30rem;">
                     <div class="card-header">
                         <h3 class="card-title text-center">Sign up</h3>
                     </div>
                     <div class="card-body">
                         <form id="signupForm">
-                            <div class="mb-3">
-                                <label for="inputName" class="form-label">Name</label>
-                                <input type="text" class="form-control" id="inputName" placeholder="Your Name">
-                              </div>
-                              <div class="mb-3">
+                            <div class="p-3">
+                                <label for="inputName" class="form-label">Username</label>
+                                <input type="text" class="form-control" id="inputName" placeholder="Username" required>
+                            </div>
+                            <div class="p-3">
                                 <label for="inputEmail" class="form-label">Email address</label>
-                                <input type="email" class="form-control" id="inputEmail" placeholder="name@example.com">
-                              </div>
-                              <div class="mb-3">
+                                <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                            </div>
+                            <div class="p-3">
                                 <label for="inputPassword" class="form-label">Password</label>
                                 <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-                              </div>
-                              <div class="mb-3">
+                            </div>
+                            <div class="p-3">
                                 <label for="confirmPassword" class="form-label">Confirm Password</label>
-                                <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password">
-                                <div class="d-grid gap-2">
-                                    <button type="submit" class="btn btn-primary">Sign Up</button>
-                                </div>
-                              </div>
+                                <input type="password" class="form-control" id="confirmPassword"
+                                    placeholder="Confirm Password">
+                            </div>
+                            <div class="p-3">
+                                <input type="checkbox" onclick="showPass()"> Show Password
+                            </div>
+                            <div class="p-3 error-message" id = "errorField" style="display:none; color:red;">Error Message</div>
+                            
+                            <br>
+                            <div class="p-2 d-grid gap-2">
+                                <button type="submit" class="btn btn-primary">Sign Up</button>
+                            </div>
                         </form>
-
                     </div>
                 </div>
             </div>
         </div>
         <!-- Footer -->
-        <div class= "padding-top: 10%">
+        <div class="p-1">
             <div th:replace="footer :: footer"></div>
         </div>
+
     </div>
+</body>
 
-    <script>
-        document.getElementById('signupForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent default form submission
 
-            // Gather form data
-            const formData = {
-                name: document.getElementById('inputName').value,
-                email: document.getElementById('inputEmail').value,
-                password: document.getElementById('inputPassword').value
-                // Need to validate this password confirmPassword: document.getElementById('confirmPassword').value
-            };
 
-            // Send POST request
-            fetch('/user/add', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(formData)
-            })
+
+<script>
+
+    function showPass() {
+        var x = document.getElementById("inputPassword");
+        var y = document.getElementById("confirmPassword");
+        if (x.type === "password") {
+            x.type = "text";
+            y.type = "text";
+        } else {
+            x.type = "password";
+            y.type = "password";
+        }
+    }
+
+    document.getElementById('signupForm').addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent default form submission
+
+        const username = document.getElementById('inputName').value;
+        const email = document.getElementById('inputEmail').value;
+        const password = document.getElementById('inputPassword').value;
+        const checkPass = document.getElementById('confirmPassword').value;
+        const roles = "ROLE_USER";
+
+        function showErrorMessage(errorMessage) {
+            var errorDiv = document.getElementById("errorField");
+            if (errorDiv) {
+                errorDiv.textContent = errorMessage;
+                errorDiv.style.display = "block";
+            }
+        }
+
+        function validateUsername() {
+            const regex = /^[a-zA-Z0-9]{0,12}$/;
+            if (!regex.test(username)) {
+                showErrorMessage("Invalid Username. Only letters and numbers are allowed. Max (0-16).");
+                throw new Error("Invalid username");
+            }
+        }
+        validateUsername();
+        function validateEmail() {
+            const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (!regex.test(email)) {
+                showErrorMessage("Invalid Email Address.");
+                throw new Error("Invalid email");
+            }
+        }
+        validateEmail();
+        function validatePassword() {
+            if (password != checkPass) {
+                showErrorMessage("Passwords do not match!");
+                throw new Error("Invalid password");
+            }
+            const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*()_+{}|:<>?~-]).{8,24}$/;
+            if (!regex.test(password)) {
+                showErrorMessage("Invalid Password. Passwords must be 8-24 characters long with One upper case, One lower case, One number and a special character.");
+                throw new Error("Invalid password");
+            }
+        }
+        validatePassword();
+
+        // Gather form data
+        const formData = {
+            username: username,
+            email: email,
+            password: password,
+            roles: roles
+        };
+
+
+        // Send POST request
+        console.log(formData);
+        console.log(JSON.stringify(formData));
+        fetch('/user/add', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        })
             .then(response => {
-                if (!response.ok) {
-                    throw new Error('Failed to sign up. Please try again later.');
-                }
+                //console.log(response.json())
                 return response.json();
             })
             .then(data => {
-                console.log('Success:', data);
-                // Handle success response here, e.g., redirect to another page
+                console.log("data: "+ data);
+                console.log('Request Response:', data.message);
+                //Display Confirmation
+                if (data.message === "Registration Sucessful.") {
+                    swal(data.message, "", "success");
+                } else {
+                    showErrorMessage(data.message);
+                }
+
             })
             .catch(error => {
-                console.error('Error:', error);
                 // Handle error here
+                console.error('Error:', error);
             });
-        });
-    </script>
+
+    });
+</script>
 
 
-</body>
 <!-- Bootstrap Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
