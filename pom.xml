@@ -82,10 +82,10 @@
 
 		<!-- Spaces Dependency for HTML report cloud storage-->
 		<dependency>
-      		<groupId>software.amazon.awssdk</groupId>
-      		<artifactId>aws-sdk-java</artifactId>
-      		<version>2.25.30</version>
-    	</dependency>
+			<groupId>com.amazonaws</groupId>
+			<artifactId>aws-java-sdk</artifactId>
+			<version>1.11.1000</version>
+  		</dependency>
 	</dependencies>
 
 	<build>
