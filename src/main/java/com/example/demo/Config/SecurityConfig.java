@@ -32,15 +32,15 @@ public class SecurityConfig {
      public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
          http
                  .authorizeHttpRequests((authz) -> authz
-                                 .requestMatchers("/").permitAll()
-                                 .requestMatchers("/signup").permitAll()
-                                 .requestMatchers("/user/add").permitAll()
-                                 .requestMatchers("/user/**").permitAll()
                                  .requestMatchers("/login").permitAll()
                                  .requestMatchers("/dashboard").hasRole("USER")
                                  .requestMatchers("/testing/**").permitAll() //Change Later
                                  .requestMatchers("/test").hasRole("USER")
                                  .requestMatchers("/uploadtest").hasRole("USER")
+                                 .requestMatchers("/").permitAll()
+                                 .requestMatchers("/signup").permitAll()
+                                 .requestMatchers("/user/add").permitAll()
+                                 //.requestMatchers("/user/**").permitAll()
                                  .anyRequest().authenticated()
 
                  )

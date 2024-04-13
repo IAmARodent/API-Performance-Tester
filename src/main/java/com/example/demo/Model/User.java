@@ -38,7 +38,6 @@ public class User {
     super();
   }
 
-
   public String getRoles() {
     return roles;
   }

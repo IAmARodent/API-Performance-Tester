@@ -31,16 +31,18 @@ public class UserController {
         String username = user.getUserame();
         String email = user.getEmail();
         String plaintext = user.getPassword();
-
+        
+        System.out.print(username);
         if (userRepository.getUsername(username) != null){
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Username is already in use");
+            return "{\"message\": \"Username is already in use.\"}";
         } else {
             if (userRepository.getEmail(email) != null){
-                throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Email is already in use");
+                return "{\"message\": \"Email is already in use.\"}";
+            } else {
+                //user.setPassword(BCrypt.hashpw(plaintext, BCrypt.gensalt()));
+                userRepository.save(user);
+                return "{\"message\": \"Registration Sucessful.\"}";
             }
-            user.setPassword(BCrypt.hashpw(plaintext, BCrypt.gensalt()));
-            userRepository.save(user);
-            return "{\"message\": \"Registration Sucessful.\"}";
         }
     }
     
