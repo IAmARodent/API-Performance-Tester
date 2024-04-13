@@ -1,6 +1,4 @@
-package com.example.demo.Controller;
-
-import org.springframework.stereotype.Controller;
+package com.example.demo.REST;
 
 import java.util.List;
 
@@ -11,24 +9,19 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-
+import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.Model.Test;
 import com.example.demo.Repository.TestRepository;
 
-@Controller
-public class TestingController {
+@RestController
+public class TestingRestController {
 	@Autowired
     TestRepository testRepository;
 
-	@PostMapping("/testing/userinputs")
-    public String addUser(@RequestBody Test test) {
-		testRepository.save(test);
-		return "dashboard";
-    }
-
-	@GetMapping("/testing")
-	public String testing(){
-		return "usertesting";
+	@GetMapping("/testing/list")
+	public List<Test> findByUserId(int userid) {
+		return testRepository.findByUserid(userid);
 	}
+	
 }

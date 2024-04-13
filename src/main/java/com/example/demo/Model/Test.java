@@ -58,6 +58,9 @@ public class Test {
         this.successrate = successrate;
         this.htmlreportlink = htmlreportlink;
     }
+    public Test(){
+        super();
+    }
 
     public int getTestid() {
         return testid;

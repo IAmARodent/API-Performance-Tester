@@ -35,8 +35,12 @@ public class SecurityConfig {
                                  .requestMatchers("/").permitAll()
                                  .requestMatchers("/signup").permitAll()
                                  .requestMatchers("/user/add").permitAll()
+                                 .requestMatchers("/user/**").permitAll()
                                  .requestMatchers("/login").permitAll()
                                  .requestMatchers("/dashboard").hasRole("USER")
+                                 .requestMatchers("/testing/**").permitAll() //Change Later
+                                 .requestMatchers("/test").hasRole("USER")
+                                 .requestMatchers("/uploadtest").hasRole("USER")
                                  .anyRequest().authenticated()
 
                  )

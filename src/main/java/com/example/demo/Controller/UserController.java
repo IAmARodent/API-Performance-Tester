@@ -11,7 +11,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 import java.util.List;
 
@@ -63,9 +64,17 @@ public class UserController {
     }
 
     @GetMapping("/get")
-    public List<User> findAllUsers() {
-        List<User> userList = userRepository.findAll();
-        return userList;
+    public String findUserSession() {
+		Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		String username = "[ERROR COULD NOT RETRIEVE NAME.]";
+		if (principal instanceof UserDetails) {
+			username = ((UserDetails)principal).getUsername();
+		} else {
+			username = principal.toString();
+		}
+        String target = userRepository.getId(username);
+
+        return target;
     }
 
     @GetMapping("/findByEmail")
@@ -73,7 +82,6 @@ public class UserController {
         User target = userRepository.findByEmail(email);
         return target;
     }
-
 
     @GetMapping("/email")
     public String getEmail(String email) {
@@ -100,8 +108,8 @@ public class UserController {
     }
 
     @GetMapping("/id")
-    public String getId(String email) {
-        String target = userRepository.getId(email);
+    public String getId(String username) {
+        String target = userRepository.getId(username);
         return target;
     }
 

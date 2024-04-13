@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-100" data-bs-theme="auto">
 
 <head>
     <meta charset="UTF-8">
@@ -18,13 +18,13 @@
     </style>
 </head>
 
-<body class="d-flex h-100 text-center text-bg-light">
+<body class="d-flex h-100 text-bg-light">
     <div class="cover-container d-flex w-100 h-100 p-3 flex-column">
         <!-- Navbar -->
         <div th:replace="navbar :: header"></div>
-        <div class="row justify-content-center login-container">
-            <div class="col-md-6">
-                <div class="card">
+        <div class="d-flex w-100 h-100 p-2">
+            <div class="d-flex w-100 h-100 justify-content-center" style="padding-bottom: 10%">
+                <div class="card sm-1">
                     <div class="card-header">
                         <h3 class="card-title text-center">Run an API Test</h3>
                     </div>
@@ -65,16 +65,16 @@
                     </form>
 
                 </div>
-            </div>
         </div>
     </div>
-    <!-- Footer -->
-    <div class="padding-top: 10%">
-        <div th:replace="footer :: footer"></div>
-    </div>
+        <!-- Footer -->
+        <div>
+            <div th:replace="footer :: footer"></div>
+        </div>
     </div>
 
     <script>
+
         document.getElementById('userTestingInput').addEventListener('submit', function (event) {
             event.preventDefault(); // Prevent default form submission
 
@@ -85,6 +85,7 @@
                 duration: document.getElementById('duration').value,
                 serverlocation: document.getElementById('server').value,
             };
+
             async function fetchData() {
                 const response = await fetch('/test', {
                     method: 'POST',
@@ -95,34 +96,50 @@
                 });
                 return response;
             }
-            fetchData().then(result => {
-                result.json().then(value => {
-                    console.log(value);
-                    console.log(value.responseTime);
-                    const formData2 = {
-                        userid: 100,
-                        datetime: value.date,
-                        url: document.getElementById('url').value,
-                        users: document.getElementById('users').value,
-                        rampup: document.getElementById('ramp').value,
-                        duration: document.getElementById('duration').value,
-                        serverlocation: document.getElementById('server').value,
-                        averageresponsetime: value.responseTime,
-                        successrate: value.successRate,
-                        htmlreportlink: value.htmlreportlink
-                    };
 
-                    // Send POST request
-                    fetch('/testing/userinputs', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify(formData2)
-                    });
+            let userid;
 
+            //Get User ID
+            fetch('/user/get')
+                .then(response => { return response.text() })
+                .then(data => {
+                    userid = data;
+
+                    //Fetch API Stats
+                    fetchData().then(result => {
+                        result.json().then(value => {
+                            console.log(value);
+                            console.log(value.responseTime);
+                            const formData2 = {
+                                userid: userid,
+                                datetime: value.date,
+                                url: document.getElementById('url').value,
+                                users: document.getElementById('users').value,
+                                rampup: document.getElementById('ramp').value,
+                                duration: document.getElementById('duration').value,
+                                serverlocation: document.getElementById('server').value,
+                                averageresponsetime: value.responseTime,
+                                successrate: value.successRate,
+                                htmlreportlink: value.htmlreportlink
+                            };
+
+                            // Send POST request
+                            fetch('/testing/userinputs', {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json'
+                                },
+                                body: JSON.stringify(formData2)
+                            });
+
+                        })
+                    })
                 })
-            })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                });
+
+
         });
 
     </script>

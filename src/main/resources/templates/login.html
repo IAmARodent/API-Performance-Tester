@@ -15,7 +15,7 @@
 <body class="d-flex h-100 text-bg-light">
     <div class="cover-container d-flex w-100 h-100 p-3 flex-column">
         <!-- Navbar -->
-        <div th:replace="navbar :: header"></div>
+        <div th:replace="~{navbar :: header}"></div>
 
         <div class="d-flex w-100 h-100 p-2">
             <!-- Content -->
@@ -52,7 +52,7 @@
         </div>
         <!-- Footer -->
         <div class="p-1">
-            <div th:replace="footer :: footer"></div>
+            <div th:replace="~{footer :: footer}"></div>
         </div>
 
     </div>

@@ -14,7 +14,10 @@ public interface UserRepository extends JpaRepository<User,Integer> {
 
     User findByEmail(String email);
 
-    @Query("SELECT u.username from User u where username = ?1")
+    @Query("SELECT u.id from User u where username = ?1")
+    User findUserSessionId(String username);
+
+    @Query("SELECT u from User u where username = ?1")
     String getUsername(String username);
 
     @Query("SELECT u.email from User u where email = ?1")
@@ -23,6 +26,6 @@ public interface UserRepository extends JpaRepository<User,Integer> {
     @Query("SELECT u.password from User u where email = ?1")
     String getPassword(String email);
 
-    @Query("SELECT u.id from User u where email = ?1")
-    String getId(String email);
+    @Query("SELECT u.id from User u where username = ?1")
+    String getId(String username);
 }
