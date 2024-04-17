@@ -39,7 +39,7 @@ public class UserController {
             if (userRepository.getEmail(email) != null){
                 return "{\"message\": \"Email is already in use.\"}";
             } else {
-                //user.setPassword(BCrypt.hashpw(plaintext, BCrypt.gensalt()));
+                user.setPassword(BCrypt.hashpw(plaintext, BCrypt.gensalt()));
                 userRepository.save(user);
                 return "{\"message\": \"Registration Sucessful.\"}";
             }

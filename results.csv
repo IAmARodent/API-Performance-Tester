@@ -1,52 +1,28 @@
 timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
-1713012568327,119,NBA,200,OK,10 Users 1-1,text,true,,21223,116,1,1,http://www.google.com/,112,0,41
-1713012568448,70,NBA,200,OK,10 Users 1-1,text,true,,21198,116,1,1,http://www.google.com/,65,0,0
-1713012568518,69,NBA,200,OK,10 Users 1-1,text,true,,21255,116,1,1,http://www.google.com/,64,0,0
-1713012568587,65,NBA,200,OK,10 Users 1-1,text,true,,21315,116,1,1,http://www.google.com/,61,0,0
-1713012568652,67,NBA,200,OK,10 Users 1-1,text,true,,21311,116,1,1,http://www.google.com/,63,0,0
-1713012568719,69,NBA,200,OK,10 Users 1-1,text,true,,21422,116,1,1,http://www.google.com/,63,0,0
-1713012568788,373,NBA,200,OK,10 Users 1-1,text,true,,21240,116,1,1,http://www.google.com/,369,0,0
-1713012569161,67,NBA,200,OK,10 Users 1-1,text,true,,21182,116,1,1,http://www.google.com/,62,0,0
-1713012569228,68,NBA,200,OK,10 Users 1-1,text,true,,21658,116,2,2,http://www.google.com/,64,0,0
-1713012569296,74,NBA,200,OK,10 Users 1-1,text,true,,21292,116,2,2,http://www.google.com/,71,0,0
-1713012569283,108,NBA,200,OK,10 Users 1-2,text,true,,21343,116,2,2,http://www.google.com/,96,0,33
-1713012569370,62,NBA,200,OK,10 Users 1-1,text,true,,21162,116,2,2,http://www.google.com/,59,0,0
-1713012569391,69,NBA,200,OK,10 Users 1-2,text,true,,21210,116,2,2,http://www.google.com/,66,0,0
-1713012569432,74,NBA,200,OK,10 Users 1-1,text,true,,21168,116,2,2,http://www.google.com/,70,0,0
-1713012569461,75,NBA,200,OK,10 Users 1-2,text,true,,21615,116,2,2,http://www.google.com/,70,0,0
-1713012569506,68,NBA,200,OK,10 Users 1-1,text,true,,21220,116,2,2,http://www.google.com/,65,0,0
-1713012569536,72,NBA,200,OK,10 Users 1-2,text,true,,21193,116,2,2,http://www.google.com/,68,0,0
-1713012569608,67,NBA,200,OK,10 Users 1-2,text,true,,21388,116,2,2,http://www.google.com/,63,0,0
-1713012569675,70,NBA,200,OK,10 Users 1-2,text,true,,21689,116,2,2,http://www.google.com/,66,0,0
-1713012569745,66,NBA,200,OK,10 Users 1-2,text,true,,21290,116,2,2,http://www.google.com/,62,0,0
-1713012569812,92,NBA,200,OK,10 Users 1-2,text,true,,21179,116,2,2,http://www.google.com/,65,0,0
-1713012569574,371,NBA,200,OK,10 Users 1-1,text,true,,21318,116,2,2,http://www.google.com/,367,0,0
-1713012569904,71,NBA,200,OK,10 Users 1-2,text,true,,21328,116,2,2,http://www.google.com/,68,0,0
-1713012569945,69,NBA,200,OK,10 Users 1-1,text,true,,21379,116,2,2,http://www.google.com/,64,0,0
-1713012569976,65,NBA,200,OK,10 Users 1-2,text,true,,21266,116,2,2,http://www.google.com/,61,0,0
-1713012570014,67,NBA,200,OK,10 Users 1-1,text,true,,21263,116,2,2,http://www.google.com/,63,0,0
-1713012570041,68,NBA,200,OK,10 Users 1-2,text,true,,21206,116,2,2,http://www.google.com/,64,0,0
-1713012570081,71,NBA,200,OK,10 Users 1-1,text,true,,21165,116,2,2,http://www.google.com/,67,0,0
-1713012570110,69,NBA,200,OK,10 Users 1-2,text,true,,21220,116,2,2,http://www.google.com/,64,0,0
-1713012570153,77,NBA,200,OK,10 Users 1-1,text,true,,21631,116,2,2,http://www.google.com/,77,0,0
-1713012570179,65,NBA,200,OK,10 Users 1-2,text,true,,21210,116,2,2,http://www.google.com/,60,0,0
-1713012570245,68,NBA,200,OK,10 Users 1-2,text,true,,21226,116,3,3,http://www.google.com/,65,0,0
-1713012570230,85,NBA,200,OK,10 Users 1-1,text,true,,21276,116,2,2,http://www.google.com/,85,0,0
-1713012570282,109,NBA,200,OK,10 Users 1-3,text,true,,21268,116,1,1,http://www.google.com/,96,0,20
-1713012571281,98,NBA,200,OK,10 Users 1-4,text,true,,21210,116,1,1,http://www.google.com/,83,0,14
-1713012572282,95,NBA,200,OK,10 Users 1-5,text,true,,21201,116,1,1,http://www.google.com/,83,0,15
-1713012573280,103,NBA,200,OK,10 Users 1-6,text,true,,21180,116,1,1,http://www.google.com/,77,0,13
-1713012574280,102,NBA,200,OK,10 Users 1-7,text,true,,21304,116,1,1,http://www.google.com/,89,0,14
-1713012575280,88,NBA,200,OK,10 Users 1-8,text,true,,21074,116,1,1,http://www.google.com/,75,0,13
-1713012576279,92,NBA,200,OK,10 Users 1-9,text,true,,21227,116,1,1,http://www.google.com/,79,0,12
-1713012577294,100,NBA,200,OK,10 Users 1-10,text,true,,21340,116,1,1,http://www.google.com/,88,0,15
-1713012578281,99,NBA,200,OK,10 Users 1-11,text,true,,21385,116,1,1,http://www.google.com/,83,0,14
-1713012579281,105,NBA,200,OK,10 Users 1-12,text,true,,21347,116,1,1,http://www.google.com/,92,0,14
-1713012580280,92,NBA,200,OK,10 Users 1-13,text,true,,21262,116,1,1,http://www.google.com/,79,0,12
-1713012581279,102,NBA,200,OK,10 Users 1-14,text,true,,21308,116,1,1,http://www.google.com/,89,0,12
-1713012582280,94,NBA,200,OK,10 Users 1-15,text,true,,21272,116,1,1,http://www.google.com/,80,0,14
-1713012583279,101,NBA,200,OK,10 Users 1-16,text,true,,21199,116,1,1,http://www.google.com/,88,0,14
-1713012584279,93,NBA,200,OK,10 Users 1-17,text,true,,21197,116,1,1,http://www.google.com/,78,0,13
-1713012585279,99,NBA,200,OK,10 Users 1-18,text,true,,21254,116,1,1,http://www.google.com/,87,0,12
-1713012586280,136,NBA,200,OK,10 Users 1-19,text,true,,21215,116,1,1,http://www.google.com/,121,0,15
-1713012587279,93,NBA,200,OK,10 Users 1-20,text,true,,21125,116,1,1,http://www.google.com/,78,0,14
+1713375327493,1732,NBA,200,OK,10 Users 1-1,text,true,,830712,228,4,4,https://www.nfl.com/,1059,0,54
+1713375327493,1059,NBA-0,301,Moved Permanently,10 Users 1-1,,true,,353,114,4,4,http://www.nfl.com/,1059,0,54
+1713375328553,672,NBA-1,200,OK,10 Users 1-1,text,true,,830359,114,4,4,https://www.nfl.com/,584,0,552
+1713375327752,1522,NBA,200,OK,10 Users 1-2,text,true,,830710,228,4,4,https://www.nfl.com/,853,0,19
+1713375327752,853,NBA-0,301,Moved Permanently,10 Users 1-2,,true,,353,114,4,4,http://www.nfl.com/,853,0,19
+1713375328605,669,NBA-1,200,OK,10 Users 1-2,text,true,,830357,114,4,4,https://www.nfl.com/,566,0,542
+1713375327995,1377,NBA,200,OK,10 Users 1-3,text,true,,830710,228,4,4,https://www.nfl.com/,650,0,15
+1713375327995,650,NBA-0,301,Moved Permanently,10 Users 1-3,,true,,353,114,4,4,http://www.nfl.com/,650,0,15
+1713375328646,726,NBA-1,200,OK,10 Users 1-3,text,true,,830357,114,4,4,https://www.nfl.com/,611,0,582
+1713375328243,1189,NBA,200,OK,10 Users 1-4,text,true,,830710,228,4,4,https://www.nfl.com/,534,0,23
+1713375328243,534,NBA-0,301,Moved Permanently,10 Users 1-4,,true,,353,114,4,4,http://www.nfl.com/,534,0,23
+1713375328778,654,NBA-1,200,OK,10 Users 1-4,text,true,,830357,114,4,4,https://www.nfl.com/,569,0,545
+1713375329377,111,NBA,200,OK,10 Users 1-3,text,true,,830710,228,4,4,https://www.nfl.com/,65,0,17
+1713375329377,65,NBA-0,301,Moved Permanently,10 Users 1-3,,true,,353,114,4,4,http://www.nfl.com/,65,0,17
+1713375329442,46,NBA-1,200,OK,10 Users 1-3,text,true,,830357,114,4,4,https://www.nfl.com/,15,0,0
+1713375329433,117,NBA,200,OK,10 Users 1-4,text,true,,830710,228,4,4,https://www.nfl.com/,62,0,18
+1713375329433,62,NBA-0,301,Moved Permanently,10 Users 1-4,,true,,353,114,4,4,http://www.nfl.com/,62,0,18
+1713375329495,55,NBA-1,200,OK,10 Users 1-4,text,true,,830357,114,4,4,https://www.nfl.com/,20,0,0
+1713375329489,112,NBA,200,OK,10 Users 1-3,text,true,,830710,228,3,3,https://www.nfl.com/,64,0,22
+1713375329489,64,NBA-0,301,Moved Permanently,10 Users 1-3,,true,,353,114,3,3,http://www.nfl.com/,64,0,22
+1713375329554,47,NBA-1,200,OK,10 Users 1-3,text,true,,830357,114,3,3,https://www.nfl.com/,15,0,0
+1713375329226,431,NBA,200,OK,10 Users 1-1,text,true,,830710,228,2,2,https://www.nfl.com/,378,0,27
+1713375329226,378,NBA-0,301,Moved Permanently,10 Users 1-1,,true,,353,114,2,2,http://www.nfl.com/,378,0,27
+1713375329605,52,NBA-1,200,OK,10 Users 1-1,text,true,,830357,114,2,2,https://www.nfl.com/,20,0,0
+1713375329274,420,NBA,200,OK,10 Users 1-2,text,true,,830710,228,1,1,https://www.nfl.com/,367,0,21
+1713375329274,367,NBA-0,301,Moved Permanently,10 Users 1-2,,true,,353,114,1,1,http://www.nfl.com/,367,0,21
+1713375329642,52,NBA-1,200,OK,10 Users 1-2,text,true,,830357,114,1,1,https://www.nfl.com/,18,0,0
