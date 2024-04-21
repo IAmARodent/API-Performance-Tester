@@ -5,9 +5,16 @@ public class TestInputs {
     private int users;
     private int rampup;
     private int duration;
+    private String path;
     private String serverlocation;
     public String getUrl() {
         return url;
+    }
+    public String getPath() {
+        return path;
+    }
+    public void setPath(String path) {
+        this.path =  path;
     }
     public void setUrl(String url) {
         this.url = url;

@@ -28,8 +28,9 @@ public class DemoApplication {
 		int rampup = hi.getRampup();
 		int duration = hi.getDuration(); 
 		String url = hi.getUrl();
+		String path = hi.getPath();
 		JMeter jmeter = new JMeter();
-        Parser.something(users,rampup,duration,url);
+        Parser.something(users,rampup,duration,url,path);
 		String temp;
 		TestResults results = null;
 		try {

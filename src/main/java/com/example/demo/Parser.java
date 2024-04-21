@@ -10,7 +10,6 @@ import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import java.io.*;
 import java.lang.Math;
-import java.util.ArrayList;
 
 public class Parser {
     private Document doc;
@@ -79,7 +78,6 @@ public class Parser {
             int testedLines = lineCount / 3;
             double average = (double) totalResponseTime / testedLines;
             successRate = (int)(((double) successCount / testedLines) * 100);
-            System.out.println(successCount + " "+ testedLines);
             return new CSVProperties(average, successRate, humanReadableDate);
 
         } catch (Exception e) {
@@ -117,15 +115,18 @@ public class Parser {
         private int rampTime;
         private long duration;
         private String domain;
+        private String path;
 
-        public JMXProperties(int numThreads, int rampTime, long duration, String domain) {
+        public JMXProperties(int numThreads, int rampTime, long duration, String domain, String path) {
             this.numThreads = numThreads;
             this.rampTime = rampTime;
             this.duration = duration;
             this.domain = domain;
+            this.path = path;
         }
 
-        public void editJMXFile(String filePath, int newNumThreads, int newRampTime, long newDuration, String newDomain) {
+        public void editJMXFile(String filePath, int newNumThreads, int newRampTime, 
+                                long newDuration, String newDomain, String newPath) {
             try {
                 File file = new File(filePath);
                 DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
@@ -173,8 +174,11 @@ public class Parser {
                             if ("HTTPSampler.domain".equals(propName)) {
                                 stringPropElement.setTextContent(newDomain);
                                 domain = newDomain;
-                                break;
-                            }
+                            } 
+                            else if ("HTTPSampler.path".equals(propName)) {
+                                stringPropElement.setTextContent(newPath);
+                                path = newPath;
+                            } 
                         }
                     } else {
                         System.err.println("HTTPSamplerProxy element not found.");
@@ -210,6 +214,10 @@ public class Parser {
         public String getDomain() {
             return domain;
         }
+
+        public String getPath() {
+            return path;
+        }
     }    
 
     // Parse threads, ramp time, duration from JMX file
@@ -218,6 +226,7 @@ public class Parser {
         int rampTime;
         long duration;
         String domain; 
+        String path;
         try {
             NodeList threadGroupNodeList = doc.getElementsByTagName("ThreadGroup");
             if (threadGroupNodeList.getLength() > 0) {
@@ -235,12 +244,13 @@ public class Parser {
             if (httpSamplerNodeList.getLength() > 0) {
                 Element httpSamplerElement = (Element) httpSamplerNodeList.item(0);
                 domain = httpSamplerElement.getElementsByTagName("stringProp").item(0).getTextContent();
+                path = httpSamplerElement.getElementsByTagName("stringProp").item(1).getTextContent();
             } else {
                 System.err.println("HTTPSamplerProxy element not found.");
                 return null;
             }
 
-        return new JMXProperties(numThreads, rampTime, duration, domain);
+        return new JMXProperties(numThreads, rampTime, duration, domain, path); // add path here as new param
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -257,22 +267,25 @@ public class Parser {
         System.out.println("Thread Num: " + j.getNumThreads());
         System.out.println("Ramp Time: " + j.getRampTime());
         System.out.println("Domain: " + j.getDomain());
+        System.out.println("Path: " + j.getPath()); 
 
         System.out.println("----------------------------------------------------");
     
 
-        //j.editJMXFile("nba.jmx", 100, 100, 100, "www.edit.com"); // uncomment this to edit
+        j.editJMXFile("nba.jmx", 200, 200, 200, "www.EDit.com", "/PAAAAAAAAAAAAATH"); // uncomment this to edit
 
         System.out.println("NEW STUFF: ");
         System.out.println("Duration: " + j.getDuration());
         System.out.println("Thread Num: " + j.getNumThreads());
         System.out.println("Ramp Time: " + j.getRampTime());
         System.out.println("Domain: " + j.getDomain());
+        System.out.println("Path: " + j.getPath()); 
 
         CSVProperties c = p.parseCSV("results.csv");
         System.out.println("Avg Response Time: " + c.getAvgResponseTime());
         System.out.println("Success Rate: " + c.getSuccessRate());
         System.out.println("Date (of first test): " + c.getDate());
+        
 
         /*  
          *  import com.example.demo.Parser.CSVProperties;
@@ -281,11 +294,12 @@ public class Parser {
 
     }
 
-    public static void something(int users, int ramptime, int duration, String url)
+    
+    public static void something(int users, int ramptime, int duration, String url, String path)
     {
         Parser p = new Parser("nba.jmx", "results.csv"); 
         JMXProperties j = p.parseJMXProperties();
-        j.editJMXFile("nba.jmx", users, ramptime, duration, url);
+        j.editJMXFile("nba.jmx", users, ramptime, duration, url, path);
     }
     public static TestResults something2(String link)
     {
@@ -298,4 +312,5 @@ public class Parser {
         results.setHtmlreportlink("https://api-load-tester-html-reports.nyc3.digitaloceanspaces.com/" + link + "/index.html");        
         return results;
     }
+
 }
