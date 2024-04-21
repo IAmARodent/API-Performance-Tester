@@ -62,7 +62,14 @@ public class DemoApplication {
 	@GetMapping("/hi")
 	public void testing()
 	{
-		TestResults poop = Parser.something2("ih");
-		System.out.println(poop.getSuccessRate());
+		try
+		{
+			JMeter jmeter = new JMeter();
+			String temp = jmeter.runTest();
+		}
+		catch (Exception e)
+		{
+			
+		}
 	}
 }
