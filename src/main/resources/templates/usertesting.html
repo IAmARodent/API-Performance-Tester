@@ -35,6 +35,10 @@
                                 <input type="text" class="form-control" id="url" placeholder="ie. 'www.google.com'">
                             </div>
                             <div class="mb-3">
+                                <label for="inputURL" class="form-label">Path</label>
+                                <input type="text" class="form-control" id="path" placeholder="ie. '/api/users'">
+                            </div>
+                            <div class="mb-3">
                                 <label for="inputUsers" class="form-label">Amount of Users</label>
                                 <input type="number" class="form-control" id="users"
                                     placeholder="(1-500) our servers are limited">
@@ -80,6 +84,7 @@
 
             const formData1 = {
                 url: document.getElementById('url').value,
+                path: document.getElementByID('path').value,
                 users: document.getElementById('users').value,
                 rampup: document.getElementById('ramp').value,
                 duration: document.getElementById('duration').value,
