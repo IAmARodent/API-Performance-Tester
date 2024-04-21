@@ -77,7 +77,7 @@ public class Parser {
             br.close();
             int testedLines = lineCount / 3;
             double average = (double) totalResponseTime / testedLines;
-            successRate = (int)(((double) successCount / testedLines) * 100);
+            successRate = (int)((double) (successCount / testedLines) * 100);
             return new CSVProperties(average, successRate, humanReadableDate);
 
         } catch (Exception e) {
