@@ -32,20 +32,6 @@ public class DemoApplication {
         Parser.something(users,rampup,duration,url);
 		String temp;
 		TestResults results = null;
-		/**
-		if(server = americas)
-		{
-			run normal test; will run on current server since this server is located in americas already
-		}
-		else if(server = europe)
-		{
-			return "www.europedigitalocean.239487234/test" mock europe server ip
-		}
-		else if(server = asia)
-		{
-			return "www.asiadigitalocean.394353/test"  mock asia server ip
-		}
-		*/
 		try {
 			temp = jmeter.runTest();
 			String bye = UUID.randomUUID().toString();
@@ -71,5 +57,12 @@ public class DemoApplication {
 			ignore.printStackTrace();
 		}
 		return 1;
+	}
+
+	@GetMapping("/hi")
+	public void testing()
+	{
+		TestResults poop = Parser.something2("ih");
+		System.out.println(poop.getSuccessRate());
 	}
 }

@@ -76,11 +76,10 @@ public class Parser {
                 lineCount++;
             }
             br.close();
-
             int testedLines = lineCount / 3;
             double average = (double) totalResponseTime / testedLines;
             successRate = (int)(((double) successCount / testedLines) * 100);
-
+            System.out.println(successCount + " "+ testedLines);
             return new CSVProperties(average, successRate, humanReadableDate);
 
         } catch (Exception e) {
