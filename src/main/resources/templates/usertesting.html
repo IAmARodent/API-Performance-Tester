@@ -35,7 +35,7 @@
                                 <input type="text" class="form-control" id="url" placeholder="ie. 'www.google.com'">
                             </div>
                             <div class="mb-3">
-                                <label for="inputURL" class="form-label">Path</label>
+                                <label for="inputPath" class="form-label">Path</label>
                                 <input type="text" class="form-control" id="path" placeholder="ie. '/api/users'">
                             </div>
                             <div class="mb-3">
@@ -69,8 +69,8 @@
                     </form>
 
                 </div>
+            </div>
         </div>
-    </div>
         <!-- Footer -->
         <div>
             <div th:replace="footer :: footer"></div>
@@ -81,10 +81,9 @@
 
         document.getElementById('userTestingInput').addEventListener('submit', function (event) {
             event.preventDefault(); // Prevent default form submission
-
             const formData1 = {
                 url: document.getElementById('url').value,
-                path: document.getElementByID('path').value,
+                path: document.getElementById('path').value,
                 users: document.getElementById('users').value,
                 rampup: document.getElementById('ramp').value,
                 duration: document.getElementById('duration').value,
@@ -115,10 +114,11 @@
                         result.json().then(value => {
                             console.log(value);
                             console.log(value.responseTime);
+                            var hi = document.getElementById('url').value + document.getElementById('path').value;
                             const formData2 = {
                                 userid: userid,
                                 datetime: value.date,
-                                url: document.getElementById('url').value,
+                                url: hi,
                                 users: document.getElementById('users').value,
                                 rampup: document.getElementById('ramp').value,
                                 duration: document.getElementById('duration').value,

@@ -56,28 +56,24 @@ public class Parser {
                     skipHeader = false;
                     continue; 
                 }
-
-                // Read every third line
-                if (lineCount % 3 == 0) { 
-                    String[] data = line.split(","); 
-                    if (!dateObtained) {
-                        long epochTimeSeconds = Long.parseLong(data[0]); 
-                        humanReadableDate = new java.text.SimpleDateFormat("MM/dd/yyyy HH:mm:ss").format(new java.util.Date (epochTimeSeconds));
-                        dateObtained = true;
-                    }
-                    long responseTime = Long.parseLong(data[1]);
-                    totalResponseTime += responseTime;
-                    if (data[7].equals("true")) {
-                        successCount++;
-                    } 
-                    lineCount++;
+                String[] data = line.split(","); 
+                if (!dateObtained) {
+                    long epochTimeSeconds = Long.parseLong(data[0]); 
+                    humanReadableDate = new java.text.SimpleDateFormat("MM/dd/yyyy HH:mm:ss").format(new java.util.Date (epochTimeSeconds));
+                    dateObtained = true;
                 }
+                long responseTime = Long.parseLong(data[1]);
+                totalResponseTime += responseTime;
+                if (data[7].equals("true")) {
+                    successCount++;
+                } 
                 lineCount++;
             }
             br.close();
-            int testedLines = lineCount / 3;
+            int testedLines = lineCount;
             double average = (double) totalResponseTime / testedLines;
             successRate = (int)((double) (successCount / testedLines) * 100);
+            System.out.println(successCount + " " +testedLines);
             return new CSVProperties(average, successRate, humanReadableDate);
 
         } catch (Exception e) {
