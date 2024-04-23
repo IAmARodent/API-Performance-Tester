@@ -22,8 +22,8 @@
       </ThreadGroup>
       <hashTree>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="NBA">
-          <stringProp name="HTTPSampler.domain">www.reqres.in</stringProp>
-          <stringProp name="HTTPSampler.path">/api/users</stringProp>
+          <stringProp name="HTTPSampler.domain">www.nfl.com</stringProp>
+          <stringProp name="HTTPSampler.path"/>
           <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.use_keepalive">true</boolProp>

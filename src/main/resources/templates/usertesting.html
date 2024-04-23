@@ -91,14 +91,42 @@
             };
 
             async function fetchData() {
-                const response = await fetch('/test', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(formData1)
-                });
-                return response;
+                if (document.getElementById('server').value = 'Americas') {
+                    //gonna change fetch url to america once i get server
+                    const response = await fetch('/test', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(formData1)
+                    });
+                    return response;
+                }
+                else if(document.getElementById('server').value = 'Europe')
+                {
+                    //gonna change fetch url to europe once i get server
+                    const response = await fetch('/test', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(formData1)
+                    });
+                    return response;
+                }
+                else if(document.getElementById('server').value = 'Asia')
+                {
+                    //gonna change fetch url to asia once i get server
+                    const response = await fetch('/test', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(formData1)
+                    });
+                    return response;
+                }
+
             }
 
             let userid;
