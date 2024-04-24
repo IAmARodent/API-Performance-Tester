@@ -22,9 +22,9 @@ public class TestingController {
     TestRepository testRepository;
 
 	@PostMapping("/testing/userinputs")
-    public String addUser(@RequestBody Test test) {
+    public String addUser(@RequestBody Test test	) {
 		testRepository.save(test);
-		return "dashboard";
+		return "usertesting";
     }
 
 	@GetMapping("/testing")

@@ -1,6 +1,4 @@
 timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
-1713843563998,1196,NBA,301,Moved Permanently,10 Users 1-1,,true,,353,114,5,5,http://www.nfl.com/,1188,0,83
-1713843564278,915,NBA,301,Moved Permanently,10 Users 1-3,,true,,353,114,5,5,http://www.nfl.com/,913,0,17
-1713843564079,1114,NBA,301,Moved Permanently,10 Users 1-2,,true,,353,114,5,5,http://www.nfl.com/,1106,0,18
-1713843564478,817,NBA,301,Moved Permanently,10 Users 1-4,,true,,353,114,2,2,http://www.nfl.com/,817,0,20
-1713843564679,638,NBA,301,Moved Permanently,10 Users 1-5,,true,,353,114,1,1,http://www.nfl.com/,638,0,18
+1713943364781,896,NBA,200,OK,10 Users 1-1,text,true,,20414,116,1,1,http://www.google.com/,880,0,805
+1713943365678,83,NBA,200,OK,10 Users 1-1,text,true,,20398,116,1,1,http://www.google.com/,77,0,0
+1713943365761,81,NBA,200,OK,10 Users 1-1,text,true,,20609,116,1,1,http://www.google.com/,76,0,0
