@@ -12,8 +12,10 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestBody;
 import com.example.demo.Model.TestInputs;
 import com.example.demo.Model.TestResults;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 @SpringBootApplication
+@CrossOrigin(origins = {"http://localhost:8080", "http://64.23.222.181:8080"})
 @RestController
 public class DemoApplication {
 

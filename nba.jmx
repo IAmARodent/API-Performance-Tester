@@ -22,7 +22,7 @@
       </ThreadGroup>
       <hashTree>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="NBA">
-          <stringProp name="HTTPSampler.domain">www.google.com</stringProp>
+          <stringProp name="HTTPSampler.domain">www.nba.com</stringProp>
           <stringProp name="HTTPSampler.path"/>
           <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>

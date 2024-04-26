@@ -1,4 +1,0 @@
-timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
-1713943364781,896,NBA,200,OK,10 Users 1-1,text,true,,20414,116,1,1,http://www.google.com/,880,0,805
-1713943365678,83,NBA,200,OK,10 Users 1-1,text,true,,20398,116,1,1,http://www.google.com/,77,0,0
-1713943365761,81,NBA,200,OK,10 Users 1-1,text,true,,20609,116,1,1,http://www.google.com/,76,0,0
