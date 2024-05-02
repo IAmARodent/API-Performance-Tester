@@ -10,7 +10,7 @@ Prerequesites to install on machine/server:
 
 Steps to run:
 1. Clone this repository to all your servers.
-2. Choose a server that will host the website and setup up MySQL and credentials in application.properties in src/main/resources.
+2. Choose a server that will host the website and setup up MySQL and create a database called apitester and update credentials in application.properties in src/main/resources.
 3. Change lines 111, 122, 134 in usertesting.html in src/main/resources/templates to your servers' IP in America, Europe, and Asia. (only the server hosting the website) 
 4. Run command "./mvnw spring-boot:run" in all servers.
 5. Open up the website with the IP of the server that is hosting the website on port 8080.
