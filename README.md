@@ -15,3 +15,11 @@ Steps to run:
 4. Run command "./mvnw spring-boot:run" in all servers.
 5. Open up the website with the IP of the server that is hosting the website on port 8080.
 6. The website will open.
+
+How to use application:
+1. Create an account.
+2. Log In.
+3. Click Test API to be redirected to API testing page.
+4. Input all parameters asked for. (path is not required only if apart of API url you are testing)
+5. Click Run Test and wait until it redirects you to the dashboard. (this may take a few minutes depending on inputted duration and ramp-up time as well as making necessary html reports public in cloud storage)
+6. In the dashbaord page you can see the results and a link to the HTML report that has been upload to DigitalOcean Spaces.
